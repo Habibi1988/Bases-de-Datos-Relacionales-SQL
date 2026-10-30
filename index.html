@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SQL and relational database design portfolio — CIFO La Violeta, Barcelona.">
+  <meta name="theme-color" content="#101827">
+  <title>SQL & Relational Databases | Portfolio</title>
+  <style>
+    :root{--bg:#0b1220;--panel:#121d30;--panel2:#17243a;--text:#edf3fb;--muted:#a6b5c9;--accent:#65d6ad;--line:#293951;--blue:#85b8ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+    header{border-bottom:1px solid var(--line);background:rgba(11,18,32,.92);position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+    nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:750;letter-spacing:.2px;color:var(--text)}.navlinks{display:flex;align-items:center;gap:20px;font-size:.92rem}.lang button{border:1px solid var(--line);background:var(--panel);color:var(--text);padding:7px 10px;border-radius:8px;cursor:pointer}.lang button.active{border-color:var(--accent);color:var(--accent)}
+    .hero{padding:88px 0 72px;background:radial-gradient(ellipse at 80% 5%,#1b3a4b 0,transparent 42%),linear-gradient(145deg,#0b1220,#101d30)}
+    .eyebrow{color:var(--accent);font-size:.82rem;font-weight:750;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(2.5rem,6vw,4.6rem);line-height:1.08;max-width:850px;margin:17px 0}.hero p{max-width:700px;color:var(--muted);font-size:1.13rem}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:11px 17px;border-radius:9px;background:var(--accent);color:#092018;font-weight:750}.btn.secondary{background:transparent;border:1px solid var(--line);color:var(--text)}
+    section{padding:62px 0}.section-head{margin-bottom:26px}.section-head h2{font-size:1.85rem;margin:0 0 5px}.section-head p,.muted{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:21px}.card .num{font-size:.78rem;color:var(--accent);font-weight:800;letter-spacing:1px}.card h3{font-size:1.06rem;margin:8px 0}.card p{color:var(--muted);font-size:.93rem;margin:0}
+    .about{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}.info{background:var(--panel);border:1px solid var(--line);padding:24px;border-radius:14px}.info h3{margin-top:0}.info p{color:var(--muted)}.tags{display:flex;gap:8px;flex-wrap:wrap}.tag{padding:6px 10px;background:var(--panel2);border:1px solid var(--line);border-radius:99px;font-size:.86rem;color:#d6e3f4}
+    .roadmap{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.step{display:flex;gap:14px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px}.step b{color:var(--accent);font-size:.82rem;white-space:nowrap}.step span{font-weight:600}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem}.footerin{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    [data-lang="es"]{display:none}
+    @media(max-width:760px){.navlinks{gap:10px}.navlinks a{display:none}.grid{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.hero{padding:68px 0 55px}}
+    @media(max-width:520px){.grid,.roadmap{grid-template-columns:1fr}.wrap{width:min(100% - 28px,1080px)}nav{height:60px}.brand{font-size:.88rem}.hero h1{font-size:2.55rem}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="brand" href="#">SQL / DATABASES</a>
+  <div class="navlinks"><a href="#about"><span data-lang="en">About</span><span data-lang="es">Sobre el proyecto</span></a><a href="#topics"><span data-lang="en">Topics</span><span data-lang="es">Contenidos</span></a><a href="#roadmap"><span data-lang="en">Roadmap</span><span data-lang="es">Itinerario</span></a><a href="https://github.com/Habibi1988/Bases-de-Datos-Relacionales-SQL">GitHub ↗</a></div>
+  <div class="lang"><button id="enBtn" class="active" type="button">EN</button> <button id="esBtn" type="button">ES</button></div>
+</nav></div></header>
+<main>
+  <div class="hero"><div class="wrap">
+    <div class="eyebrow"><span data-lang="en">Learning portfolio · CIFO La Violeta</span><span data-lang="es">Portafolio formativo · CIFO La Violeta</span></div>
+    <h1><span data-lang="en">SQL & Relational Databases</span><span data-lang="es">SQL y Bases de Datos Relacionales</span></h1>
+    <p data-lang="en">A practical portfolio exploring relational database design, data modelling, SQL querying, and database programming.</p>
+    <p data-lang="es">Un portafolio práctico sobre diseño de bases de datos relacionales, modelado de datos, consultas SQL y programación de bases de datos.</p>
+    <div class="actions"><a class="btn" href="https://github.com/Habibi1988/Bases-de-Datos-Relacionales-SQL"><span data-lang="en">Explore repository ↗</span><span data-lang="es">Ver repositorio ↗</span></a><a class="btn secondary" href="#roadmap"><span data-lang="en">Course roadmap</span><span data-lang="es">Itinerario del curso</span></a></div>
+  </div></div>
+  <section id="about"><div class="wrap about">
+    <div><div class="section-head"><h2><span data-lang="en">About this portfolio</span><span data-lang="es">Sobre este portafolio</span></h2><p><span data-lang="en">Learning by designing, querying, and building.</span><span data-lang="es">Aprender diseñando, consultando y construyendo.</span></p></div>
+      <p class="muted" data-lang="en">This repository documents practical exercises and projects from the course <strong>Programació amb SQL i bases de dades relacionals (IFCD47)</strong> at CIFO La Violeta in Barcelona. Work will be added progressively as each topic is completed.</p>
+      <p class="muted" data-lang="es">Este repositorio documenta ejercicios prácticos y proyectos del curso <strong>Programació amb SQL i bases de dades relacionals (IFCD47)</strong> en CIFO La Violeta, Barcelona. El contenido se irá incorporando a medida que se completen los distintos temas.</p>
+    </div>
+    <div class="info"><h3><span data-lang="en">Course details</span><span data-lang="es">Datos del curso</span></h3><p><strong>Institution:</strong> CIFO La Violeta</p><p><strong>Course:</strong> IFCD47</p><p><strong>Location:</strong> Barcelona, Spain</p><p><strong>Focus:</strong> SQL · Relational modelling · MySQL</p></div>
+  </div></section>
+  <section id="topics"><div class="wrap"><div class="section-head"><h2><span data-lang="en">What you'll find here</span><span data-lang="es">Qué encontrarás</span></h2><p><span data-lang="en">Core areas covered in the learning path.</span><span data-lang="es">Áreas principales del itinerario formativo.</span></p></div>
+    <div class="grid">
+      <article class="card"><div class="num">01</div><h3><span data-lang="en">Database design</span><span data-lang="es">Diseño de bases de datos</span></h3><p><span data-lang="en">ER diagrams, entities, relationships, keys, and relational models.</span><span data-lang="es">Diagramas E/R, entidades, relaciones, claves y modelos relacionales.</span></p></article>
+      <article class="card"><div class="num">02</div><h3><span data-lang="en">Normalization</span><span data-lang="es">Normalización</span></h3><p><span data-lang="en">Structure data to reduce redundancy and improve integrity.</span><span data-lang="es">Estructurar los datos para reducir redundancias y mejorar su integridad.</span></p></article>
+      <article class="card"><div class="num">03</div><h3><span data-lang="en">SQL queries</span><span data-lang="es">Consultas SQL</span></h3><p><span data-lang="en">DDL, DML, joins, subqueries, and analytical queries.</span><span data-lang="es">DDL, DML, JOIN, subconsultas y consultas analíticas.</span></p></article>
+      <article class="card"><div class="num">04</div><h3><span data-lang="en">Database programming</span><span data-lang="es">Programación de bases de datos</span></h3><p><span data-lang="en">Views, functions, triggers, stored procedures, and events.</span><span data-lang="es">Vistas, funciones, triggers, procedimientos almacenados y eventos.</span></p></article>
+      <article class="card"><div class="num">05</div><h3><span data-lang="en">Security & integrity</span><span data-lang="es">Seguridad e integridad</span></h3><p><span data-lang="en">Constraints, users, roles, and database permissions.</span><span data-lang="es">Restricciones, usuarios, roles y permisos de bases de datos.</span></p></article>
+      <article class="card"><div class="num">06</div><h3><span data-lang="en">Final project</span><span data-lang="es">Proyecto final</span></h3><p><span data-lang="en">A complete database project, from requirements to implementation.</span><span data-lang="es">Un proyecto completo de bases de datos, desde los requisitos hasta su implementación.</span></p></article>
+    </div>
+  </div></section>
+  <section id="roadmap"><div class="wrap"><div class="section-head"><h2><span data-lang="en">Learning roadmap</span><span data-lang="es">Itinerario de aprendizaje</span></h2><p><span data-lang="en">Repository sections are organised by topic.</span><span data-lang="es">Las secciones del repositorio están organizadas por temas.</span></p></div>
+    <div class="roadmap">
+      <div class="step"><b>01</b><span><span data-lang="en">Database fundamentals</span><span data-lang="es">Fundamentos de bases de datos</span></span></div>
+      <div class="step"><b>02</b><span><span data-lang="en">ER diagrams & relational models</span><span data-lang="es">Diagramas E/R y modelos relacionales</span></span></div>
+      <div class="step"><b>03</b><span><span data-lang="en">Database normalization</span><span data-lang="es">Normalización de bases de datos</span></span></div>
+      <div class="step"><b>04</b><span>SQL DDL</span></div>
+      <div class="step"><b>05</b><span>SQL DML & queries</span></div>
+      <div class="step"><b>06</b><span>JOIN · Subqueries · CTEs</span></div>
+      <div class="step"><b>07</b><span><span data-lang="en">Views & functions</span><span data-lang="es">Vistas y funciones</span></span></div>
+      <div class="step"><b>08</b><span><span data-lang="en">Triggers & stored procedures</span><span data-lang="es">Triggers y procedimientos almacenados</span></span></div>
+      <div class="step"><b>09</b><span><span data-lang="en">Database security</span><span data-lang="es">Seguridad de bases de datos</span></span></div>
+      <div class="step"><b>10</b><span><span data-lang="en">Final project</span><span data-lang="es">Proyecto final</span></span></div>
+    </div>
+  </div></section>
+  <section><div class="wrap"><div class="info"><h3><span data-lang="en">Tools & technologies</span><span data-lang="es">Herramientas y tecnologías</span></h3><div class="tags"><span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">MySQL Workbench</span><span class="tag">Git</span><span class="tag">GitHub</span></div></div></div></section>
+</main>
+<footer><div class="wrap footerin"><span>© 2026 · SQL & Relational Databases · CIFO La Violeta</span><a href="https://github.com/Habibi1988/Bases-de-Datos-Relacionales-SQL">GitHub repository ↗</a></div></footer>
+<script>
+  const en=document.getElementById('enBtn'),es=document.getElementById('esBtn');
+  function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll('[data-lang]').forEach(el=>el.style.display=el.dataset.lang===lang?'':'none');en.classList.toggle('active',lang==='en');es.classList.toggle('active',lang==='es');}
+  en.addEventListener('click',()=>setLang('en'));es.addEventListener('click',()=>setLang('es'));
+  setLang('en');
+</script>
+</body>
+</html>
