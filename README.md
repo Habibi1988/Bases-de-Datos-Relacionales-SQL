@@ -22,7 +22,7 @@ A relational database design for a retail business managing in-store and online 
 - [Project overview and progress](10-final-project/README.md)
 - [Project report — PDF](10-final-project/documentation/Proyecto_Primeras_60_Horas_BBDD_Tienda_Omnicanal.pdf)
 - [Editable project report — Word](10-final-project/documentation/Proyecto_Primeras_60_Horas_BBDD_Tienda_Omnicanal.docx)
-- [Entity–Relationship diagram — PDF](10-final-project/er-diagram/Diagrama_ER_Tienda_Omnicanal.pdf)
+- [Entity–Relationship diagram — PDF](10-final-project/er-diagram/final-projecter-diagramDiagrama_ER_Tienda_Omnicanal.pdf)
 
 ### Topics
 - Database fundamentals and relational concepts
@@ -82,7 +82,7 @@ Diseño de una base de datos relacional para una empresa minorista que gestiona 
 - [Descripción y progreso del proyecto](10-final-project/README.md)
 - [Memoria del proyecto — PDF](10-final-project/documentation/Proyecto_Primeras_60_Horas_BBDD_Tienda_Omnicanal.pdf)
 - [Memoria editable — Word](10-final-project/documentation/Proyecto_Primeras_60_Horas_BBDD_Tienda_Omnicanal.docx)
-- [Diagrama Entidad–Relación — PDF](10-final-project/er-diagram/Diagrama_ER_Tienda_Omnicanal.pdf)
+- [Diagrama Entidad–Relación — PDF](10-final-project/er-diagram/final-projecter-diagramDiagrama_ER_Tienda_Omnicanal.pdf)
 
 ### Contenidos
 - Fundamentos de bases de datos y conceptos relacionales
