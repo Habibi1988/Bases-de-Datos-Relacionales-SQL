@@ -17,12 +17,19 @@ This repository brings together practical exercises and projects covering the fo
 ### Featured project
 **Omnichannel Retail Sales and Inventory Management System**
 
-A relational database design for a retail business managing in-store and online sales, customers, products, store-level inventory, and payments. The current deliverable covers the first 60 course hours: conceptual design (UF01) and logical design (UF02). SQL implementation is planned for a later stage.
+A relational database design for a retail business managing in-store and online sales, customers, products, store-level inventory, and payments.
 
+**First 60-hour deliverable**
+- **UF01 — Conceptual design (30 hours):** project context, requirements and business rules, entities, attributes, relationships, cardinalities, and the E/R diagram.
+- **UF02 — Logical design (30 hours):** relational schema, tables, primary keys, foreign keys, and relevant optionality and uniqueness constraints.
+
+The current submission is limited to conceptual and logical design. SQL implementation, sample records, queries, views, triggers, stored procedures, events, and database permissions belong to later project stages and are not claimed as completed in this deliverable.
+
+**Project files**
 - [Project overview and progress](10-final-project/README.md)
 - [Project report — PDF](10-final-project/documentation/Proyecto_Primeras_60_Horas_BBDD_Tienda_Omnicanal.pdf)
 - [Editable project report — Word](10-final-project/documentation/Proyecto_Primeras_60_Horas_BBDD_Tienda_Omnicanal.docx)
-- [Entity–Relationship diagram — PDF](10-final-project/er-diagram/final-projecter-diagramDiagrama_ER_Tienda_Omnicanal.pdf)
+- [Entity–Relationship diagram — PDF](10-final-project/er-diagram/Diagrama_ER_Tienda_Omnicanal.pdf)
 
 ### Topics
 - Database fundamentals and relational concepts
@@ -77,12 +84,19 @@ Este repositorio reúne ejercicios prácticos y proyectos sobre los fundamentos 
 ### Proyecto destacado
 **Sistema de Gestión de Ventas e Inventario de una Tienda Omnicanal**
 
-Diseño de una base de datos relacional para una empresa minorista que gestiona ventas en tienda física y online, clientes, productos, inventario por sucursal y pagos. La entrega actual cubre las primeras 60 horas del curso: diseño conceptual (UF01) y diseño lógico (UF02). La implementación SQL se abordará en una etapa posterior.
+Diseño de una base de datos relacional para una empresa minorista que gestiona ventas en tienda física y online, clientes, productos, inventario por sucursal y pagos.
 
+**Entrega de las primeras 60 horas**
+- **UF01 — Diseño conceptual (30 horas):** contexto del proyecto, requisitos y reglas de negocio, entidades, atributos, relaciones, cardinalidades y diagrama E/R.
+- **UF02 — Diseño lógico (30 horas):** esquema relacional, tablas, claves primarias, claves foráneas y restricciones relevantes de opcionalidad y unicidad.
+
+La entrega actual se limita al diseño conceptual y lógico. La implementación SQL, los registros de ejemplo, las consultas, vistas, triggers, procedimientos almacenados, eventos y permisos de usuarios corresponden a etapas posteriores y no se presentan como trabajo ya completado.
+
+**Archivos del proyecto**
 - [Descripción y progreso del proyecto](10-final-project/README.md)
 - [Memoria del proyecto — PDF](10-final-project/documentation/Proyecto_Primeras_60_Horas_BBDD_Tienda_Omnicanal.pdf)
 - [Memoria editable — Word](10-final-project/documentation/Proyecto_Primeras_60_Horas_BBDD_Tienda_Omnicanal.docx)
-- [Diagrama Entidad–Relación — PDF](10-final-project/er-diagram/final-projecter-diagramDiagrama_ER_Tienda_Omnicanal.pdf)
+- [Diagrama Entidad–Relación — PDF](10-final-project/er-diagram/Diagrama_ER_Tienda_Omnicanal.pdf)
 
 ### Contenidos
 - Fundamentos de bases de datos y conceptos relacionales
