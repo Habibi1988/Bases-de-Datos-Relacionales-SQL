@@ -20,7 +20,6 @@
     .about{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}.info{background:var(--panel);border:1px solid var(--line);padding:24px;border-radius:14px}.info h3{margin-top:0}.info p{color:var(--muted)}.tags{display:flex;gap:8px;flex-wrap:wrap}.tag{padding:6px 10px;background:var(--panel2);border:1px solid var(--line);border-radius:99px;font-size:.86rem;color:#d6e3f4}
     .roadmap{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.step{display:flex;gap:14px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px}.step b{color:var(--accent);font-size:.82rem;white-space:nowrap}.step span{font-weight:600}
     footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem}.footerin{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    [data-lang="es"]{display:none}
     @media(max-width:760px){.navlinks{gap:10px}.navlinks a{display:none}.grid{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.hero{padding:68px 0 55px}}
     @media(max-width:520px){.grid,.roadmap{grid-template-columns:1fr}.wrap{width:min(100% - 28px,1080px)}nav{height:60px}.brand{font-size:.88rem}.hero h1{font-size:2.55rem}}
   </style>
@@ -28,7 +27,7 @@
 <body>
 <header><div class="wrap"><nav>
   <a class="brand" href="#">SQL / DATABASES</a>
-  <div class="navlinks"><a href="#about"><span data-lang="en">About</span><span data-lang="es">Sobre el proyecto</span></a><a href="#topics"><span data-lang="en">Topics</span><span data-lang="es">Contenidos</span></a><a href="#roadmap"><span data-lang="en">Roadmap</span><span data-lang="es">Itinerario</span></a><a href="https://github.com/Habibi1988/Bases-de-Datos-Relacionales-SQL">GitHub ↗</a></div>
+  <div class="navlinks"><a href="#about"><span data-lang="en">About</span><span data-lang="es">Sobre el proyecto</span></a><a href="#topics"><span data-lang="en">Topics</span><span data-lang="es">Contenidos</span></a><a href="#roadmap"><span data-lang="en">Roadmap</span><span data-lang="es">Itinerario</span></a><a href="https://github.com/Habibi1988/Bases-de-Datos-Relacionales-SQL"><span data-lang="en">GitHub ↗</span><span data-lang="es">GitHub ↗</span></a></div>
   <div class="lang"><button id="enBtn" class="active" type="button">EN</button> <button id="esBtn" type="button">ES</button></div>
 </nav></div></header>
 <main>
@@ -44,7 +43,7 @@
       <p class="muted" data-lang="en">This repository documents practical exercises and projects from the course <strong>Programació amb SQL i bases de dades relacionals (IFCD47)</strong> at CIFO La Violeta in Barcelona. Work will be added progressively as each topic is completed.</p>
       <p class="muted" data-lang="es">Este repositorio documenta ejercicios prácticos y proyectos del curso <strong>Programació amb SQL i bases de dades relacionals (IFCD47)</strong> en CIFO La Violeta, Barcelona. El contenido se irá incorporando a medida que se completen los distintos temas.</p>
     </div>
-    <div class="info"><h3><span data-lang="en">Course details</span><span data-lang="es">Datos del curso</span></h3><p><strong>Institution:</strong> CIFO La Violeta</p><p><strong>Course:</strong> IFCD47</p><p><strong>Location:</strong> Barcelona, Spain</p><p><strong>Focus:</strong> SQL · Relational modelling · MySQL</p></div>
+    <div class="info"><h3><span data-lang="en">Course details</span><span data-lang="es">Datos del curso</span></h3><p><strong><span data-lang="en">Institution:</span><span data-lang="es">Centro:</span></strong> CIFO La Violeta</p><p><strong><span data-lang="en">Course:</span><span data-lang="es">Curso:</span></strong> IFCD47</p><p><strong><span data-lang="en">Location:</span><span data-lang="es">Ubicación:</span></strong> <span data-lang="en">Barcelona, Spain</span><span data-lang="es">Barcelona, España</span></p><p><strong><span data-lang="en">Focus:</span><span data-lang="es">Enfoque:</span></strong> <span data-lang="en">SQL · Relational modelling · MySQL</span><span data-lang="es">SQL · Modelado relacional · MySQL</span></p></div>
   </div></section>
   <section id="topics"><div class="wrap"><div class="section-head"><h2><span data-lang="en">What you'll find here</span><span data-lang="es">Qué encontrarás</span></h2><p><span data-lang="en">Core areas covered in the learning path.</span><span data-lang="es">Áreas principales del itinerario formativo.</span></p></div>
     <div class="grid">
@@ -72,10 +71,10 @@
   </div></section>
   <section><div class="wrap"><div class="info"><h3><span data-lang="en">Tools & technologies</span><span data-lang="es">Herramientas y tecnologías</span></h3><div class="tags"><span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">MySQL Workbench</span><span class="tag">Git</span><span class="tag">GitHub</span></div></div></div></section>
 </main>
-<footer><div class="wrap footerin"><span>© 2026 · SQL & Relational Databases · CIFO La Violeta</span><a href="https://github.com/Habibi1988/Bases-de-Datos-Relacionales-SQL">GitHub repository ↗</a></div></footer>
+<footer><div class="wrap footerin"><span>© 2026 · SQL & Relational Databases · CIFO La Violeta</span><a href="https://github.com/Habibi1988/Bases-de-Datos-Relacionales-SQL"><span data-lang="en">GitHub repository ↗</span><span data-lang="es">Repositorio GitHub ↗</span></a></div></footer>
 <script>
   const en=document.getElementById('enBtn'),es=document.getElementById('esBtn');
-  function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll('[data-lang]').forEach(el=>el.style.display=el.dataset.lang===lang?'':'none');en.classList.toggle('active',lang==='en');es.classList.toggle('active',lang==='es');}
+  function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll('[data-lang]').forEach(el=>{el.hidden=el.dataset.lang!==lang;});en.classList.toggle('active',lang==='en');es.classList.toggle('active',lang==='es');}
   en.addEventListener('click',()=>setLang('en'));es.addEventListener('click',()=>setLang('es'));
   setLang('en');
 </script>
