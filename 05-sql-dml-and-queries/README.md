@@ -1,3 +1,3 @@
-# sql dml and queries
+# 04 — Data Manipulation Language (DML) and Queries
 
-This section will contain course notes, practical exercises, and related SQL/database resources. Content will be added as the course progresses.
+This section will contain data manipulation and query exercises, including joins, subqueries, and aggregation, as they are completed.

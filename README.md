@@ -116,3 +116,16 @@ Consulta el [sitio web del proyecto](https://habibi1988.github.io/Bases-de-Datos
 - **Repository:** [github.com/Habibi1988/Bases-de-Datos-Relacionales-SQL](https://github.com/Habibi1988/Bases-de-Datos-Relacionales-SQL)
 
 *This repository is intended for educational and professional portfolio purposes. All work will be progressively documented.*
+
+## Course exercises (CIFO La Violeta)
+
+The exercises and course materials previously maintained in the separate `CIFO-BBDD` repository are being consolidated here. The original course overview is preserved at [CIFO-BBDD course overview](docs/course-overview/CIFO-BBDD-README.md), and the course website files are retained under [docs/course-site](docs/course-site/).
+
+### Exercise collection
+
+- [Exercise 1 — Orders and delivery](02-er-diagrams-and-relational-models/exercise-1-orders-and-delivery/README.md)
+- [Exercise 2 — Invoices and products](02-er-diagrams-and-relational-models/exercise-2-invoices-and-products/README.md)
+- [Exercise 3 — Roads (Carreteras)](02-er-diagrams-and-relational-models/exercise-3-roads/README.md)
+- [Exercise 4 — Flight system](02-er-diagrams-and-relational-models/exercise-4-flight-system/README.md)
+
+The original Access database file for Exercise 3 is not included because the available GitHub file-reading route returned an empty payload for that large binary file. It remains in the original `CIFO-BBDD` repository until it can be copied and verified separately. A duplicate PDF under `articulos-encargos` was not copied twice; its identical copy is retained in Exercise 1.

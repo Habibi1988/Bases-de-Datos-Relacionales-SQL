@@ -1,3 +1,8 @@
-# database fundamentals
+# 01 — Relational Database Design
 
-This section will contain course notes, practical exercises, and related SQL/database resources. Content will be added as the course progresses.
+Exercises and notes related to information requirements, conceptual database design, and the data life cycle.
+
+## Planned materials
+- Data life-cycle exercises 1–2 (source document reviewed locally; original remains in `Cifo-La-Violeta`).
+
+This folder placement is provisional and can be refined to match the instructor's exact unit mapping.
