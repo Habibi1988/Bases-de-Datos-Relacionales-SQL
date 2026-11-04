@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Final project: Omnichannel Retail Sales and Inventory Management System — CIFO La Violeta, IFCD47.">
+<title>Final Project | SQL & Relational Databases</title>
+<style>
+:root{--bg:#0b1220;--panel:#121d30;--text:#edf3fb;--muted:#a6b5c9;--accent:#65d6ad;--line:#293951;--blue:#85b8ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,Arial,sans-serif}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(1080px,calc(100% - 36px));margin:auto}
+header{border-bottom:1px solid var(--line);background:#101a2b}.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}.brand{color:var(--text);font-weight:750}.lang button,.link{background:var(--panel);border:1px solid var(--line);color:var(--text);padding:8px 12px;border-radius:8px;cursor:pointer}.lang button.active{border-color:var(--accent);color:var(--accent)}
+.hero{padding:54px 0 34px}.eyebrow{color:var(--accent);font-size:.82rem;font-weight:750;letter-spacing:1.5px;text-transform:uppercase}h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.15;margin:12px 0}.lead,.muted{color:var(--muted)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.link.primary{background:var(--accent);color:#092018;border-color:var(--accent);font-weight:750}
+section{padding:26px 0}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px}h2{margin:0 0 12px;font-size:1.5rem}.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.fact{background:#17243a;padding:14px;border-radius:10px}.viewer{background:#fff;border-radius:12px;overflow:hidden}.viewer iframe{display:block;width:100%;height:760px;border:0}.viewer-note{font-size:.88rem;color:var(--muted);margin:8px 0 0}.hidden{display:none}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);margin-top:30px}
+@media(max-width:650px){.facts{grid-template-columns:1fr}.viewer iframe{height:540px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="../../">SQL / DATABASES</a><div><a href="../../"><span data-lang="en">Portfolio home</span><span data-lang="es">Inicio del portafolio</span></a>　<span class="lang"><button id="enBtn" class="active">EN</button> <button id="esBtn">ES</button></span></div></div></header>
+<main class="wrap">
+<div class="hero"><div class="eyebrow"><span data-lang="en">Final project · IFCD47 · CIFO La Violeta</span><span data-lang="es">Proyecto final · IFCD47 · CIFO La Violeta</span></div>
+<h1><span data-lang="en">Omnichannel Retail Sales and Inventory Management System</span><span data-lang="es">Sistema de Gestión de Ventas e Inventario de una Tienda Omnicanal</span></h1>
+<p class="lead" data-lang="en">A relational database design for a retailer managing physical-store and online sales, customers, products, inventory by store, and payments.</p>
+<p class="lead" data-lang="es">Diseño de una base de datos relacional para una tienda que gestiona ventas en establecimientos físicos y online, clientes, productos, inventario por sucursal y pagos.</p>
+<div class="actions"><a class="link primary" href="documentation/Proyecto_Primeras_60_Horas_BBDD_Tienda_Omnicanal.pdf" target="_blank" rel="noopener"><span data-lang="en">Open full project report (PDF) ↗</span><span data-lang="es">Abrir memoria completa (PDF) ↗</span></a><a class="link" href="documentation/Proyecto_Primeras_60_Horas_BBDD_Tienda_Omnicanal.docx" download><span data-lang="en">Download Word</span><span data-lang="es">Descargar Word</span></a></div>
+</div>
+<section class="panel"><h2><span data-lang="en">Current deliverable — first 60 hours</span><span data-lang="es">Entrega actual — primeras 60 horas</span></h2>
+<div class="facts"><div class="fact"><strong>UF01 · 30 h</strong><div data-lang="en">Conceptual design: requirements, business rules, entities, attributes, relationships, cardinalities and E/R diagram.</div><div data-lang="es">Diseño conceptual: requisitos, reglas de negocio, entidades, atributos, relaciones, cardinalidades y diagrama E/R.</div></div>
+<div class="fact"><strong>UF02 · 30 h</strong><div data-lang="en">Logical design: relational schema, tables, primary keys, foreign keys, uniqueness and optionality constraints.</div><div data-lang="es">Diseño lógico: esquema relacional, tablas, claves primarias y foráneas, restricciones de unicidad y opcionalidad.</div></div></div>
+<p class="muted" data-lang="en">SQL implementation and query development are planned for a later stage and are not included in this 60-hour submission.</p><p class="muted" data-lang="es">La implementación SQL y el desarrollo de consultas se realizarán en una etapa posterior y no forman parte de esta entrega de 60 horas.</p></section>
+<section class="panel"><h2><span data-lang="en">Entity–Relationship diagram</span><span data-lang="es">Diagrama Entidad–Relación</span></h2>
+<p class="muted"><span data-lang="en">The diagram is displayed below. You can also open it separately or download the PDF.</span><span data-lang="es">El diagrama se muestra a continuación. También puedes abrirlo en otra pestaña o descargar el PDF.</span></p>
+<div class="actions"><a class="link primary" href="er-diagram/Diagrama_ER_Tienda_Omnicanal.pdf" target="_blank" rel="noopener"><span data-lang="en">Open diagram in new tab ↗</span><span data-lang="es">Abrir diagrama en otra pestaña ↗</span></a><a class="link" href="er-diagram/Diagrama_ER_Tienda_Omnicanal.pdf" download><span data-lang="en">Download diagram</span><span data-lang="es">Descargar diagrama</span></a></div>
+<div class="viewer"><iframe src="er-diagram/Diagrama_ER_Tienda_Omnicanal.pdf#toolbar=1&navpanes=0" title="Entity–Relationship diagram"></iframe></div>
+<p class="viewer-note"><span data-lang="en">If the preview does not load in your browser, use “Open diagram in new tab”.</span><span data-lang="es">Si la vista previa no se carga en tu navegador, utiliza «Abrir diagrama en otra pestaña».</span></p>
+</section>
+</main>
+<footer><div class="wrap">IFCD47 · CIFO La Violeta · <a href="../../">Back to portfolio / Volver al portafolio</a></div></footer>
+<script>
+const en=document.getElementById('enBtn'),es=document.getElementById('esBtn');
+function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll('[data-lang]').forEach(el=>el.hidden=el.dataset.lang!==lang);en.classList.toggle('active',lang==='en');es.classList.toggle('active',lang==='es')}
+en.addEventListener('click',()=>setLang('en'));es.addEventListener('click',()=>setLang('es'));setLang('en');
+</script>
+</body></html>
