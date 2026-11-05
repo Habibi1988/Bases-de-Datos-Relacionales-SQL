@@ -1,50 +1,61 @@
-# Final Project — Relational Database Design
+# Final Project — Omnichannel Fashion Retail Database
 
-## Project
+## Project identity
 
-**Sistema de Gestión de Ventas e Inventario de una Tienda Omnicanal**
+**Diseño e Implementación de una Base de Datos para la Gestión Omnicanal de Productos, Inventario y Ventas de una Tienda de Moda**
 
-This project designs a relational database for an omnichannel retail business that manages in-store and online sales, customers, products, store-level inventory, and payments.
+A portfolio database project inspired by the omnichannel retail business model of UNIQLO. This is an independent educational design; it is not UNIQLO's official database, internal schema, or a claim about its systems.
 
-The database is designed around the business rule that each online order is fulfilled in its entirety by one physical store. Inventory is managed independently at each store, and in-store sales may be registered without identifying the customer.
+## Business scope and approved rules
 
-## Current scope: first 60 course hours
+- Product specializations: ROPA, CALZADO, COMPLEMENTOS.
+- ISA specialization: **Total y Disjunta** — every product belongs to exactly one of the three subtypes.
+- Product audiences are separate from product types: Hombre, Mujer, Unisex, Infantil.
+- Products can target multiple audiences through PRODUCTO_PUBLICO.
+- Each product has one or more variants; each variant belongs to exactly one product and has a unique SKU.
+- Variant size (talla) and color may be NULL when not applicable.
+- Inventory is tracked by variant and physical store.
+- Each variant/store pair has one inventory record.
+- In-store sales may have no identified customer.
+- Every sale is associated with one physical store.
+- Online orders are fulfilled by one physical store.
+- A sale has one or more detail lines and at most one payment record.
 
-The work documented so far covers the first two learning units:
+## Approved logical model
 
-- **UF01 — Conceptual design (30 hours):** business requirements and rules, entities, attributes, relationships, cardinalities, and the Entity–Relationship model.
-- **UF02 — Logical design (30 hours):** transformation of the conceptual model into a relational schema, including primary keys, foreign keys, and relevant uniqueness and optionality constraints.
+The approved relational model contains **15 tables**:
+CATEGORIAS, SUBCATEGORIAS, PRODUCTOS, ROPA, CALZADO, COMPLEMENTOS, VARIANTES_PRODUCTO, PUBLICOS_OBJETIVO, PRODUCTO_PUBLICO, SUCURSALES, INVENTARIO, CLIENTES, VENTAS, DETALLE_VENTA, PAGOS.
 
-SQL implementation and query development are planned for later stages of the course and are not part of this 60-hour deliverable.
+## Design artefacts
 
-## Project documentation
+### Conceptual model
+- [Current E/R diagram — SVG](er-diagram/Diagrama-ER-UNIQLO.svg)
 
-The full project document is available in both formats:
+### Logical model
+- [Relational model — SVG diagram](relational-model/Modelo-Relacional-UNIQLO.svg)
+- [Relational model — full specification (Markdown)](relational-model/Modelo-Relacional-UNIQLO.md)
 
-- [PDF — First 60 Hours](documentation/Proyecto_Primeras_60_Horas_BBDD_Tienda_Omnicanal.pdf)
-- [Editable Word document — First 60 Hours](documentation/Proyecto_Primeras_60_Horas_BBDD_Tienda_Omnicanal.docx)
+### Normalization
+- [Normalization diagram — SVG](documentation/Normalizacion-UNIQLO.svg)
+- [Normalization analysis — full report (Markdown)](documentation/Normalizacion-UNIQLO.md)
 
-## Repository structure
+## Course scope and status
 
-```text
-10-final-project/
-├── README.md
-├── documentation/   # Project reports and written documentation
-├── er-diagram/      # Entity–Relationship diagrams
-├── relational-model/ # Relational schema and table diagrams
-├── sql/             # SQL scripts (future stage)
-├── queries/         # SQL queries (future stage)
-└── results/         # Outputs and analysis (future stage)
-```
-
-## Development status
+The current work covers conceptual and logical database design. SQL implementation, sample data, queries, views, triggers, stored procedures, events, and permissions are later stages and are not presented as completed.
 
 | Area | Status |
 |---|---|
-| Requirements and business rules | Completed for current scope |
-| Conceptual model (UF01) | Completed for current scope |
-| Relational model (UF02) | Completed for current scope |
-| SQL implementation | Not started — planned for a later stage |
-| Queries and results | Not started — planned for a later stage |
+| Business scope and rules | Approved |
+| E/R conceptual model | Approved; current SVG diagram published |
+| Relational model (15 tables) | Approved; diagram and specification published |
+| 1FN, 2FN, 3FN analysis | Documented; final validation follows MySQL implementation |
+| MySQL DDL and constraints | Planned |
+| Sample data and SQL queries | Planned |
+| Views, triggers, routines, events and security | Planned |
 
-This repository will be updated progressively as the course project advances.
+## Course
+- Programació amb SQL i bases de dades relacionals (IFCD47)
+- CIFO La Violeta, Barcelona
+
+## Historical files
+Earlier generic omnichannel-retail report and diagram files are retained as historical course work. The current 15-table UNIQLO-inspired SVG and Markdown artefacts above supersede those earlier drafts for the final-project design.
