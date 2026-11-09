@@ -11,7 +11,7 @@ Cinco ejercicios independientes del curso **Programació amb SQL i bases de dade
 | [Ejercicio 2](exercise-02-sales-system/README.md) | Sistema de ventas | Documentación, diagramas y esquema SQL |
 | [Ejercicio 3](exercise-03-roads/README.md) | Carreteras | Diagramas y documentación |
 | [Ejercicio 4](exercise-04-flight-system/README.md) | Sistema de vuelos | Diagramas y documentación |
-| [Ejercicio 5](exercise-05-to-be-defined/README.md) | Pendiente de definir | Estructura preparada |
+| [Ejercicio 5](exercise-05-freight-transport/README.md) | Empresa de transporte de mercancías | Enunciado disponible; diseño pendiente |
 
 ### Estructura común
 - er-diagram/: diagramas Entidad–Relación.
@@ -31,7 +31,7 @@ Five independent exercises from the **Programació amb SQL i bases de dades rela
 | [Exercise 2](exercise-02-sales-system/README.md) | Sales System | Documentation, diagrams and SQL schema |
 | [Exercise 3](exercise-03-roads/README.md) | Roads | Diagrams and documentation |
 | [Exercise 4](exercise-04-flight-system/README.md) | Flight System | Diagrams and documentation |
-| [Exercise 5](exercise-05-to-be-defined/README.md) | To be defined | Folder structure prepared |
+| [Exercise 5](exercise-05-freight-transport/README.md) | Freight Transport Company | Assignment available; design pending |
 
 ### Standard structure
 - er-diagram/: Entity–Relationship diagrams.
