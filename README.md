@@ -29,6 +29,7 @@ La implementación SQL, los datos de prueba, las consultas y los objetos avanzad
 - [Ejercicio 2 — Facturas y productos](exercises/exercise-02-sales-system/README.md)
 - [Ejercicio 3 — Carreteras](exercises/exercise-03-roads/README.md)
 - [Ejercicio 4 — Sistema de vuelos](exercises/exercise-04-flight-system/README.md)
+- [Ejercicio 5 — Empresa de transporte de mercancías](exercises/exercise-05-freight-transport/README.md)
 
 ### Ejercicios prácticos
 - [Índice de los cinco ejercicios](exercises/README.md)
