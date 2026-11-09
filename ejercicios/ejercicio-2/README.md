@@ -15,7 +15,7 @@ Este documento sigue el enunciado oficial de tres páginas **Ejercicios Modelo E
 - Para cada producto vendido se registra el precio aplicado en el momento de la venta, la cantidad y el importe total de la línea.
 
 ### Implementación SQL
-- [Script de esquema MySQL](schema.sql)
+- [Script de esquema MySQL](sql/schema.sql)
 
 El script define proveedores y clientes identificados por CIF/NIF, una tabla independiente para los múltiples teléfonos de cada cliente, categorías, productos, facturas y líneas de detalle.
 
@@ -50,7 +50,7 @@ This note follows the official three-page assignment, **Ejercicios Modelo Entida
 - For each product sold, the system records the sale-time price, quantity sold and total amount for that product line.
 
 ### SQL implementation
-- [MySQL schema script](schema.sql)
+- [MySQL schema script](sql/schema.sql)
 
 The script defines supplier and customer CIF/NIF identifiers, a separate table for a customer's multiple telephone numbers, categories, products, invoices and invoice detail lines.
 

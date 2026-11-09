@@ -17,7 +17,7 @@ Este documento sigue el enunciado oficial de tres páginas **Ejercicios Modelo E
 - Una dirección consta de calle, número, ciudad y código postal.
 
 ### Implementación SQL
-- [Script de esquema MySQL](schema.sql)
+- [Script de esquema MySQL](sql/schema.sql)
 
 El script incluye claves primarias y foráneas, una restricción CHECK para el límite de crédito de 3.000.000 €, stock por pareja fábrica/artículo, tablas de cabecera y detalle de encargos, y una relación opcional autorreferenciada para fábricas alternativas.
 
@@ -55,7 +55,7 @@ This note follows the official three-page assignment, **Ejercicios Modelo Entida
 - An address consists of street, number, city and postal code.
 
 ### SQL implementation
-- [MySQL schema script](schema.sql)
+- [MySQL schema script](sql/schema.sql)
 
 The script includes primary and foreign keys, a CHECK constraint for the €3,000,000 credit limit, stock by factory/article pair, order header/detail tables and an optional self-referencing alternative-factory relationship.
 

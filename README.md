@@ -25,14 +25,23 @@ El modelo lógico aprobado contiene **15 tablas** para categorías, subtipos de 
 La implementación SQL, los datos de prueba, las consultas y los objetos avanzados de base de datos se abordarán en etapas posteriores.
 
 ### Ejercicios del curso
-- [Ejercicio 1 — Artículos y encargos](02-er-diagrams-and-relational-models/exercise-1-orders-and-delivery/README.md)
-- [Ejercicio 2 — Facturas y productos](02-er-diagrams-and-relational-models/exercise-2-invoices-and-products/README.md)
-- [Ejercicio 3 — Carreteras](02-er-diagrams-and-relational-models/exercise-3-roads/README.md)
-- [Ejercicio 4 — Sistema de vuelos](02-er-diagrams-and-relational-models/exercise-4-flight-system/README.md)
+- [Ejercicio 1 — Artículos y encargos](ejercicios/ejercicio-1/README.md)
+- [Ejercicio 2 — Facturas y productos](ejercicios/ejercicio-2/README.md)
+- [Ejercicio 3 — Carreteras](ejercicios/ejercicio-3/README.md)
+- [Ejercicio 4 — Sistema de vuelos](ejercicios/ejercicio-4/README.md)
+
+### Ejercicios prácticos
+- [Índice de los cinco ejercicios](ejercicios/README.md)
 
 ### Estructura del repositorio
 ```text
 .
+├── ejercicios/
+│   ├── ejercicio-1/
+│   ├── ejercicio-2/
+│   ├── ejercicio-3/
+│   ├── ejercicio-4/
+│   └── ejercicio-5/
 ├── 01-database-fundamentals/
 ├── 02-er-diagrams-and-relational-models/
 ├── 03-database-normalization/
@@ -81,10 +90,12 @@ The approved logical model contains **15 tables** for product categories, produc
 SQL implementation, sample data, queries and advanced database objects will be addressed in later stages.
 
 ### Course exercises
-- [Exercise 1 — Articles and Orders](02-er-diagrams-and-relational-models/exercise-1-orders-and-delivery/README.md)
-- [Exercise 2 — Invoices and Products](02-er-diagrams-and-relational-models/exercise-2-invoices-and-products/README.md)
-- [Exercise 3 — Roads](02-er-diagrams-and-relational-models/exercise-3-roads/README.md)
-- [Exercise 4 — Flight System](02-er-diagrams-and-relational-models/exercise-4-flight-system/README.md)
+- [Browse all five practical exercises](ejercicios/README.md)
+- [Exercise 1 — Articles and Orders](ejercicios/ejercicio-1/README.md)
+- [Exercise 2 — Sales System](ejercicios/ejercicio-2/README.md)
+- [Exercise 3 — Roads](ejercicios/ejercicio-3/README.md)
+- [Exercise 4 — Flight System](ejercicios/ejercicio-4/README.md)
+- [Exercise 5 — To be defined](ejercicios/ejercicio-5/README.md)
 
 ### Course information
 - **Course:** Programació amb SQL i bases de dades relacionals (IFCD47)
@@ -92,4 +103,4 @@ SQL implementation, sample data, queries and advanced database objects will be a
 - **Location:** Barcelona, Spain
 - **Status:** In progress
 
-The repository also contains course exercises and learning materials organised by topic. The portfolio is updated progressively as the course advances.
+The repository also contains five practical exercises, each organised as a standalone mini-project, as well as course learning materials organised by topic. The portfolio is updated progressively as the course advances.
