@@ -1,38 +1,156 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
-<rect width="1600" height="1050" fill="#fff"/>
-<style>
-.t{font: bold 25px Arial;fill:#17324d}.sub{font:16px Arial;fill:#526579}.h{font:bold 18px Arial;fill:#17324d}.f{font:16px Arial;fill:#253746}.note{font:15px Arial;fill:#8b3a32}.box{fill:#f4f8fc;stroke:#42627e;stroke-width:2}.head{fill:#dceaf6}.junction{fill:#fff4df;stroke:#a97828;stroke-width:2}.line{stroke:#536b80;stroke-width:2;fill:none}.dash{stroke-dasharray:8 6}.card{fill:#f7f7f7;stroke:#999;stroke-width:1.5}
-</style>
-<text x="45" y="48" class="t">EXERCISE 5 — FREIGHT TRANSPORT COMPANY</text>
-<text x="45" y="78" class="sub">Entity–Relationship diagram · based on the supplied Access Relationships screenshot and assignment brief</text>
-<!-- lines behind entities -->
-<path class="line" d="M250 180 H310"/><text x="265" y="168" class="sub">1:N</text>
-<path class="line" d="M510 180 H570"/><text x="525" y="168" class="sub">1:N</text>
-<path class="line" d="M770 180 H835 V250 H890"/><text x="795" y="165" class="sub">1:N</text>
-<path class="line dash" d="M1000 250 V350 H900 V390"/><path class="line dash" d="M1000 250 V350 H1120 V390"/>
-<path class="line" d="M250 560 H310"/><text x="265" y="548" class="sub">1:N</text>
-<path class="line" d="M510 560 H570"/><text x="525" y="548" class="sub">1:N</text>
-<path class="line" d="M770 560 H835 V650 H890"/><text x="795" y="545" class="sub">1:N</text>
-<path class="line dash" d="M410 560 V700 H310 V750"/><path class="line dash" d="M410 560 V700 H520 V750"/>
-<path class="line" d="M1090 650 H1160"/><text x="1100" y="638" class="sub">1:N</text>
-<path class="line" d="M1090 650 H1130 V850 H1160"/><text x="1095" y="830" class="sub">1:N</text>
-<path class="line" d="M1320 650 H1390 V850 H1450"/><path class="line" d="M1320 850 H1450"/>
-<!-- entities -->
-<g transform="translate(50 120)"><rect class="box" width="200" height="125"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">MARCAS</text><text x="12" y="62" class="f">PK pk_marca</text><text x="12" y="90" class="f">marca</text></g>
-<g transform="translate(310 120)"><rect class="box" width="200" height="125"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">MODELOS</text><text x="12" y="62" class="f">PK pk_modelo</text><text x="12" y="88" class="f">modelo</text><text x="12" y="112" class="f">FK fk_marca</text></g>
-<g transform="translate(570 120)"><rect class="box" width="200" height="125"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">VEHICULOS</text><text x="12" y="62" class="f">PK matricula</text><text x="12" y="88" class="f">FK fk_modelo</text><text x="12" y="112" class="f">anyo</text></g>
-<g transform="translate(890 190)"><rect class="box" width="220" height="160"/><rect class="head" width="220" height="35"/><text x="12" y="25" class="h">VIAJES</text><text x="12" y="62" class="f">PK pk_viaje</text><text x="12" y="88" class="f">origen · destino</text><text x="12" y="114" class="f">FK conductor</text><text x="12" y="140" class="f">FK vehiculo</text><text x="12" y="157" class="note">fecha_salida not visible</text></g>
-<g transform="translate(850 390)"><rect class="box" width="220" height="130"/><rect class="head" width="220" height="35"/><text x="12" y="25" class="h">CAMIONES</text><text x="12" y="62" class="f">PK/FK pk_matricula</text><text x="12" y="92" class="f">tonelaje_maximo</text></g>
-<g transform="translate(1120 390)"><rect class="box" width="240" height="130"/><rect class="head" width="240" height="35"/><text x="12" y="25" class="h">FURGONETAS</text><text x="12" y="62" class="f">PK/FK pk_matricula</text><text x="12" y="92" class="f">capacidad_maxima_m3</text></g>
-<text x="860" y="375" class="sub">VEHICULOS specialization: total + disjoint (required)</text>
-<g transform="translate(50 500)"><rect class="box" width="200" height="160"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">EMPLEADOS</text><text x="12" y="62" class="f">PK dni</text><text x="12" y="88" class="f">nombre</text><text x="12" y="114" class="f">apellido1 · apellido2</text><text x="12" y="140" class="f">telefono</text></g>
-<g transform="translate(310 500)"><rect class="box" width="200" height="125"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">DEPARTAMENTOS</text><text x="12" y="62" class="f">PK (confirm name)</text><text x="12" y="90" class="f">departamento</text></g>
-<g transform="translate(570 500)"><rect class="box" width="200" height="125"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">ADMINISTRATIVOS</text><text x="12" y="62" class="f">PK/FK dni</text><text x="12" y="90" class="f">FK fk_departamento</text></g>
-<g transform="translate(310 750)"><rect class="box" width="200" height="125"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">CONDUCTORES</text><text x="12" y="62" class="f">PK/FK dni</text><text x="12" y="90" class="f">carnet · categoria</text></g>
-<text x="290" y="720" class="sub">EMPLEADOS specialization: total + disjoint (required)</text>
-<g transform="translate(890 590)"><rect class="box" width="220" height="160"/><rect class="head" width="220" height="35"/><text x="12" y="25" class="h">TRAMOS_VIAJE</text><text x="12" y="62" class="f">PK/FK fk_viaje</text><text x="12" y="88" class="f">PK numero_tramo</text><text x="12" y="114" class="f">distancia_km</text><text x="12" y="140" class="f">fecha_inicio · fecha_fin</text></g>
-<g transform="translate(1160 800)"><rect class="junction" width="260" height="115"/><rect x="1160" y="800" width="260" height="35" fill="#f6e4bd" stroke="#a97828"/><text x="1172" y="825" class="h">ADMINISTRATIVO_VIAJES</text><text x="1172" y="865" class="f">PK/FK fk_viaje</text><text x="1172" y="892" class="f">PK/FK dni</text></g>
-<g transform="translate(50 800)"><rect class="card" width="210" height="100"/><text x="12" y="28" class="h">CATEGORIA_CONDUCTORES</text><text x="12" y="58" class="note">Table visible in Access</text><text x="12" y="82" class="note">relationship not shown</text></g>
-<text x="50" y="970" class="sub">Segment identity = (fk_viaje, numero_tramo). Trip deletion should cascade to its segments.</text>
-<text x="50" y="995" class="note">Review flags: fecha_salida not visible; category lookup relationship and exact department key need confirmation.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1240" viewBox="0 0 1800 1240" role="img" aria-labelledby="title desc">
+<title id="title">Exercise 5 — Freight Transport Company: relational E/R diagram</title>
+<desc id="desc">A clean entity relationship diagram showing vehicle and employee subtypes, trip assignments, trip segments and the many-to-many administrative assignment.</desc>
+<defs>
+  <style>
+    .bg{fill:#f7f9fc}.title{font:700 30px Arial,sans-serif;fill:#142b45}.subtitle{font:15px Arial,sans-serif;fill:#60738a}
+    .zone{fill:#eef3f8;stroke:#d8e1eb;stroke-width:1.5}.zoneTitle{font:700 17px Arial,sans-serif;fill:#425a72;letter-spacing:1px}
+    .entity{fill:#fff;stroke:#7890a8;stroke-width:1.7;rx:9}.entityHead{fill:#e5eef7}.entityTitle{font:700 17px Arial,sans-serif;fill:#183653}
+    .field{font:14px Arial,sans-serif;fill:#26394d}.key{font:700 12px Arial,sans-serif;fill:#28649a}.muted{font:13px Arial,sans-serif;fill:#65788c}
+    .connector{fill:none;stroke:#526d87;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+    .special{fill:none;stroke:#9a6a22;stroke-width:2.2;stroke-dasharray:7 5}.cardinality{font:700 14px Arial,sans-serif;fill:#253d56}
+    .note{fill:#fff8e9;stroke:#d6a54d;stroke-width:1.4;rx:8}.noteText{font:13px Arial,sans-serif;fill:#77531d}
+    .legend{font:13px Arial,sans-serif;fill:#53677c}
+  </style>
+</defs>
+<rect class="bg" width="1800" height="1240"/>
+<text x="55" y="52" class="title">EXERCISE 5 · FREIGHT TRANSPORT COMPANY</text>
+<text x="55" y="82" class="subtitle">Entity–Relationship model · based on the assignment brief and the supplied Microsoft Access relationship view</text>
+
+<!-- Group zones -->
+<rect class="zone" x="35" y="120" width="820" height="480" rx="14"/>
+<text x="60" y="153" class="zoneTitle">A · VEHICLE CATALOGUE</text>
+<rect class="zone" x="35" y="625" width="820" height="545" rx="14"/>
+<text x="60" y="658" class="zoneTitle">B · EMPLOYEE MANAGEMENT</text>
+<rect class="zone" x="890" y="120" width="875" height="1050" rx="14"/>
+<text x="915" y="153" class="zoneTitle">C · TRIPS, SEGMENTS AND ADMINISTRATION</text>
+
+<!-- Connectors behind entities -->
+<!-- Brand -> model -> vehicle -->
+<path class="connector" d="M245 285 H300"/>
+<text class="cardinality" x="257" y="273">1</text><text class="cardinality" x="282" y="273">N</text>
+<path class="connector" d="M495 285 H550"/>
+<text class="cardinality" x="507" y="273">1</text><text class="cardinality" x="532" y="273">N</text>
+<!-- Vehicle -> trip -->
+<path class="connector" d="M745 285 H820 V390 H1040"/>
+<text class="cardinality" x="758" y="272">1</text><text class="cardinality" x="1018" y="378">N</text>
+<!-- Vehicle specialization -->
+<path class="special" d="M650 350 V420 H430 V455 M650 420 H680 V455"/>
+<text class="muted" x="570" y="410">Total, disjoint*</text>
+<!-- Employee -> driver/admin -->
+<path class="special" d="M430 830 V885 H230 V925 M430 885 H640 V925"/>
+<text class="muted" x="340" y="875">Total, disjoint*</text>
+<!-- Department -> admin -->
+<path class="connector" d="M245 760 H300 V985 H545"/>
+<text class="cardinality" x="257" y="748">1</text><text class="cardinality" x="526" y="973">N</text>
+<!-- Driver -> trips -->
+<path class="connector" d="M430 1035 H875 V485 H1040"/>
+<text class="cardinality" x="442" y="1022">1</text><text class="cardinality" x="1018" y="473">N</text>
+<!-- Trip -> segment -->
+<path class="connector" d="M1260 485 H1330"/>
+<text class="cardinality" x="1272" y="472">1</text><text class="cardinality" x="1310" y="472">N</text>
+<!-- Trip -> junction -->
+<path class="connector" d="M1150 570 V750"/>
+<text class="cardinality" x="1162" y="590">1</text><text class="cardinality" x="1162" y="738">N</text>
+<!-- Admin -> junction -->
+<path class="connector" d="M745 985 H900 V810 H1040"/>
+<text class="cardinality" x="758" y="973">1</text><text class="cardinality" x="1018" y="798">N</text>
+
+<!-- Vehicle entities -->
+<g transform="translate(55 205)">
+ <rect class="entity" width="190" height="160"/><rect class="entityHead" width="190" height="40" rx="8"/>
+ <text class="entityTitle" x="14" y="26">MARCAS</text>
+ <text class="key" x="14" y="69">PK</text><text class="field" x="48" y="69">pk_marca</text>
+ <text class="field" x="14" y="100">marca</text>
+</g>
+<g transform="translate(300 205)">
+ <rect class="entity" width="195" height="160"/><rect class="entityHead" width="195" height="40" rx="8"/>
+ <text class="entityTitle" x="14" y="26">MODELOS</text>
+ <text class="key" x="14" y="69">PK</text><text class="field" x="48" y="69">pk_modelo</text>
+ <text class="key" x="14" y="100">FK</text><text class="field" x="48" y="100">fk_marca</text>
+ <text class="field" x="14" y="130">modelo</text>
+</g>
+<g transform="translate(550 205)">
+ <rect class="entity" width="195" height="145"/><rect class="entityHead" width="195" height="40" rx="8"/>
+ <text class="entityTitle" x="14" y="26">VEHICULOS</text>
+ <text class="key" x="14" y="69">PK</text><text class="field" x="48" y="69">matricula</text>
+ <text class="key" x="14" y="98">FK</text><text class="field" x="48" y="98">fk_modelo</text>
+ <text class="field" x="14" y="126">anyo</text>
+</g>
+<g transform="translate(310 455)">
+ <rect class="entity" width="220" height="125"/><rect class="entityHead" width="220" height="40" rx="8"/>
+ <text class="entityTitle" x="14" y="26">CAMIONES</text>
+ <text class="key" x="14" y="70">PK/FK</text><text class="field" x="72" y="70">pk_matricula</text>
+ <text class="field" x="14" y="101">tonelaje_maximo</text>
+</g>
+<g transform="translate(570 455)">
+ <rect class="entity" width="245" height="125"/><rect class="entityHead" width="245" height="40" rx="8"/>
+ <text class="entityTitle" x="14" y="26">FURGONETAS</text>
+ <text class="key" x="14" y="70">PK/FK</text><text class="field" x="72" y="70">pk_matricula</text>
+ <text class="field" x="14" y="101">capacidad_maxima_m3</text>
+</g>
+
+<!-- Employee entities -->
+<g transform="translate(55 705)">
+ <rect class="entity" width="190" height="160"/><rect class="entityHead" width="190" height="40" rx="8"/>
+ <text class="entityTitle" x="14" y="26">DEPARTAMENTOS</text>
+ <text class="key" x="14" y="70">PK</text><text class="field" x="48" y="70">[confirmar]</text>
+ <text class="field" x="14" y="102">departamento</text>
+</g>
+<g transform="translate(300 705)">
+ <rect class="entity" width="260" height="125"/><rect class="entityHead" width="260" height="40" rx="8"/>
+ <text class="entityTitle" x="14" y="26">EMPLEADOS</text>
+ <text class="key" x="14" y="70">PK</text><text class="field" x="48" y="70">dni</text>
+ <text class="field" x="14" y="98">nombre · apellido1 · apellido2</text>
+ <text class="field" x="14" y="118">telefono</text>
+</g>
+<g transform="translate(545 925)">
+ <rect class="entity" width="200" height="120"/><rect class="entityHead" width="200" height="40" rx="8"/>
+ <text class="entityTitle" x="14" y="26">ADMINISTRATIVOS</text>
+ <text class="key" x="14" y="69">PK/FK</text><text class="field" x="72" y="69">dni</text>
+ <text class="key" x="14" y="98">FK</text><text class="field" x="48" y="98">fk_departamento</text>
+</g>
+<g transform="translate(120 925)">
+ <rect class="entity" width="310" height="120"/><rect class="entityHead" width="310" height="40" rx="8"/>
+ <text class="entityTitle" x="14" y="26">CONDUCTORES</text>
+ <text class="key" x="14" y="69">PK/FK</text><text class="field" x="72" y="69">dni</text>
+ <text class="field" x="14" y="98">carnet · categoria</text>
+</g>
+
+<!-- Trip entities -->
+<g transform="translate(1040 390)">
+ <rect class="entity" width="220" height="180"/><rect class="entityHead" width="220" height="40" rx="8"/>
+ <text class="entityTitle" x="14" y="26">VIAJES</text>
+ <text class="key" x="14" y="70">PK</text><text class="field" x="48" y="70">pk_viaje</text>
+ <text class="field" x="14" y="98">origen · destino</text>
+ <text class="key" x="14" y="126">FK</text><text class="field" x="48" y="126">conductor</text>
+ <text class="key" x="14" y="154">FK</text><text class="field" x="48" y="154">vehiculo</text>
+</g>
+<g transform="translate(1330 390)">
+ <rect class="entity" width="390" height="180"/><rect class="entityHead" width="390" height="40" rx="8"/>
+ <text class="entityTitle" x="14" y="26">TRAMOS_VIAJE</text>
+ <text class="key" x="14" y="70">PK/FK</text><text class="field" x="72" y="70">fk_viaje</text>
+ <text class="key" x="14" y="98">PK</text><text class="field" x="48" y="98">numero_tramo</text>
+ <text class="field" x="14" y="126">distancia_km</text>
+ <text class="field" x="14" y="154">fecha_inicio · fecha_fin</text>
+</g>
+<g transform="translate(1040 750)">
+ <rect class="entity" width="330" height="145"/><rect class="entityHead" width="330" height="40" rx="8"/>
+ <text class="entityTitle" x="14" y="26">ADMINISTRATIVO_VIAJES</text>
+ <text class="key" x="14" y="70">PK/FK</text><text class="field" x="72" y="70">fk_viaje</text>
+ <text class="key" x="14" y="101">PK/FK</text><text class="field" x="72" y="101">dni</text>
+ <text class="muted" x="14" y="128">Junction table · M:N</text>
+</g>
+
+<!-- Notes and legend -->
+<rect class="note" x="1400" y="730" width="320" height="170"/>
+<text class="noteText" x="1420" y="760" font-weight="700">CHECK AGAINST ACCESS</text>
+<text class="noteText" x="1420" y="790">• fecha_salida not visible in VIAJES</text>
+<text class="noteText" x="1420" y="818">• CATEGORIA_CONDUCTORES table</text>
+<text class="noteText" x="1432" y="840">exists; relationship not shown</text>
+<text class="noteText" x="1420" y="868">• Department PK name to confirm</text>
+<text class="muted" x="55" y="1100">PK = primary key · FK = foreign key · PK/FK = subtype or junction key</text>
+<text class="muted" x="55" y="1128">* Total and disjoint specialization is required by the assignment; a PK/FK 1:1 link alone does not enforce it.</text>
+<text class="muted" x="55" y="1156">Trip segment key: (fk_viaje, numero_tramo) · Trip deletion should cascade to its segments.</text>
+<text class="muted" x="55" y="1190">Cardinalities shown as 1:N. Each trip has exactly one driver and one vehicle; optionality on parent participation must be confirmed.</text>
 </svg>
