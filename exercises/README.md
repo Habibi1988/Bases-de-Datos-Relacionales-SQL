@@ -9,7 +9,7 @@ Cinco ejercicios independientes del curso **Programació amb SQL i bases de dade
 |---|---|---|
 | [Ejercicio 1](exercise-01-articles-and-orders/README.md) | Artículos y encargos | Documentación, diagramas y esquema SQL |
 | [Ejercicio 2](exercise-02-sales-system/README.md) | Sistema de ventas | Documentación, diagramas y esquema SQL |
-| [Ejercicio 3](exercise-03-roads/README.md) | Carreteras | Diagramas y documentación |
+| [Ejercicio 3](exercise-03-roads/README.md) | Carreteras | Diagrama E/R y modelo relacional |
 | [Ejercicio 4](exercise-04-flight-system/README.md) | Sistema de vuelos | Diagramas y documentación |
 | [Ejercicio 5](exercise-05-freight-transport/README.md) | Empresa de transporte de mercancías | Enunciado disponible; diseño pendiente |
 
