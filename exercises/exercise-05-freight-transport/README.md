@@ -38,6 +38,13 @@ This exercise covers the database design for a **freight transport company**, ba
 4. **Trip segments:** each trip is divided into ordered segments with distance in kilometres, start date and end date. Segment numbering is local to each trip, so segment identification must include its owning trip. Deleting a trip also deletes its segments.
 5. **Trip administration:** the relationship between administrative employees and trips is many-to-many. An administrator may manage multiple trips, and a trip may be managed by multiple administrators.
 
+### Current deliverables
+
+- [Entity–Relationship diagram (SVG)](er-diagram/ER-Diagram-Freight-Transport.svg)
+- [Relational model (Markdown)](relational-model/Relational-Model-Freight-Transport.md)
+
+The diagram and relational model are based on the Access Relationships screenshot and the assignment PDF. Items not visible in the screenshot are explicitly marked for verification.
+
 ### Planned structure
 
 - `er-diagram/`: Entity–Relationship diagram.
