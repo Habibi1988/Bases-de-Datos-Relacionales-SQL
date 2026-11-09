@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
+<rect width="1600" height="1050" fill="#fff"/>
+<style>
+.t{font: bold 25px Arial;fill:#17324d}.sub{font:16px Arial;fill:#526579}.h{font:bold 18px Arial;fill:#17324d}.f{font:16px Arial;fill:#253746}.note{font:15px Arial;fill:#8b3a32}.box{fill:#f4f8fc;stroke:#42627e;stroke-width:2}.head{fill:#dceaf6}.junction{fill:#fff4df;stroke:#a97828;stroke-width:2}.line{stroke:#536b80;stroke-width:2;fill:none}.dash{stroke-dasharray:8 6}.card{fill:#f7f7f7;stroke:#999;stroke-width:1.5}
+</style>
+<text x="45" y="48" class="t">EXERCISE 5 — FREIGHT TRANSPORT COMPANY</text>
+<text x="45" y="78" class="sub">Entity–Relationship diagram · based on the supplied Access Relationships screenshot and assignment brief</text>
+<!-- lines behind entities -->
+<path class="line" d="M250 180 H310"/><text x="265" y="168" class="sub">1:N</text>
+<path class="line" d="M510 180 H570"/><text x="525" y="168" class="sub">1:N</text>
+<path class="line" d="M770 180 H835 V250 H890"/><text x="795" y="165" class="sub">1:N</text>
+<path class="line dash" d="M1000 250 V350 H900 V390"/><path class="line dash" d="M1000 250 V350 H1120 V390"/>
+<path class="line" d="M250 560 H310"/><text x="265" y="548" class="sub">1:N</text>
+<path class="line" d="M510 560 H570"/><text x="525" y="548" class="sub">1:N</text>
+<path class="line" d="M770 560 H835 V650 H890"/><text x="795" y="545" class="sub">1:N</text>
+<path class="line dash" d="M410 560 V700 H310 V750"/><path class="line dash" d="M410 560 V700 H520 V750"/>
+<path class="line" d="M1090 650 H1160"/><text x="1100" y="638" class="sub">1:N</text>
+<path class="line" d="M1090 650 H1130 V850 H1160"/><text x="1095" y="830" class="sub">1:N</text>
+<path class="line" d="M1320 650 H1390 V850 H1450"/><path class="line" d="M1320 850 H1450"/>
+<!-- entities -->
+<g transform="translate(50 120)"><rect class="box" width="200" height="125"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">MARCAS</text><text x="12" y="62" class="f">PK pk_marca</text><text x="12" y="90" class="f">marca</text></g>
+<g transform="translate(310 120)"><rect class="box" width="200" height="125"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">MODELOS</text><text x="12" y="62" class="f">PK pk_modelo</text><text x="12" y="88" class="f">modelo</text><text x="12" y="112" class="f">FK fk_marca</text></g>
+<g transform="translate(570 120)"><rect class="box" width="200" height="125"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">VEHICULOS</text><text x="12" y="62" class="f">PK matricula</text><text x="12" y="88" class="f">FK fk_modelo</text><text x="12" y="112" class="f">anyo</text></g>
+<g transform="translate(890 190)"><rect class="box" width="220" height="160"/><rect class="head" width="220" height="35"/><text x="12" y="25" class="h">VIAJES</text><text x="12" y="62" class="f">PK pk_viaje</text><text x="12" y="88" class="f">origen · destino</text><text x="12" y="114" class="f">FK conductor</text><text x="12" y="140" class="f">FK vehiculo</text><text x="12" y="157" class="note">fecha_salida not visible</text></g>
+<g transform="translate(850 390)"><rect class="box" width="220" height="130"/><rect class="head" width="220" height="35"/><text x="12" y="25" class="h">CAMIONES</text><text x="12" y="62" class="f">PK/FK pk_matricula</text><text x="12" y="92" class="f">tonelaje_maximo</text></g>
+<g transform="translate(1120 390)"><rect class="box" width="240" height="130"/><rect class="head" width="240" height="35"/><text x="12" y="25" class="h">FURGONETAS</text><text x="12" y="62" class="f">PK/FK pk_matricula</text><text x="12" y="92" class="f">capacidad_maxima_m3</text></g>
+<text x="860" y="375" class="sub">VEHICULOS specialization: total + disjoint (required)</text>
+<g transform="translate(50 500)"><rect class="box" width="200" height="160"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">EMPLEADOS</text><text x="12" y="62" class="f">PK dni</text><text x="12" y="88" class="f">nombre</text><text x="12" y="114" class="f">apellido1 · apellido2</text><text x="12" y="140" class="f">telefono</text></g>
+<g transform="translate(310 500)"><rect class="box" width="200" height="125"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">DEPARTAMENTOS</text><text x="12" y="62" class="f">PK (confirm name)</text><text x="12" y="90" class="f">departamento</text></g>
+<g transform="translate(570 500)"><rect class="box" width="200" height="125"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">ADMINISTRATIVOS</text><text x="12" y="62" class="f">PK/FK dni</text><text x="12" y="90" class="f">FK fk_departamento</text></g>
+<g transform="translate(310 750)"><rect class="box" width="200" height="125"/><rect class="head" width="200" height="35"/><text x="12" y="25" class="h">CONDUCTORES</text><text x="12" y="62" class="f">PK/FK dni</text><text x="12" y="90" class="f">carnet · categoria</text></g>
+<text x="290" y="720" class="sub">EMPLEADOS specialization: total + disjoint (required)</text>
+<g transform="translate(890 590)"><rect class="box" width="220" height="160"/><rect class="head" width="220" height="35"/><text x="12" y="25" class="h">TRAMOS_VIAJE</text><text x="12" y="62" class="f">PK/FK fk_viaje</text><text x="12" y="88" class="f">PK numero_tramo</text><text x="12" y="114" class="f">distancia_km</text><text x="12" y="140" class="f">fecha_inicio · fecha_fin</text></g>
+<g transform="translate(1160 800)"><rect class="junction" width="260" height="115"/><rect x="1160" y="800" width="260" height="35" fill="#f6e4bd" stroke="#a97828"/><text x="1172" y="825" class="h">ADMINISTRATIVO_VIAJES</text><text x="1172" y="865" class="f">PK/FK fk_viaje</text><text x="1172" y="892" class="f">PK/FK dni</text></g>
+<g transform="translate(50 800)"><rect class="card" width="210" height="100"/><text x="12" y="28" class="h">CATEGORIA_CONDUCTORES</text><text x="12" y="58" class="note">Table visible in Access</text><text x="12" y="82" class="note">relationship not shown</text></g>
+<text x="50" y="970" class="sub">Segment identity = (fk_viaje, numero_tramo). Trip deletion should cascade to its segments.</text>
+<text x="50" y="995" class="note">Review flags: fecha_salida not visible; category lookup relationship and exact department key need confirmation.</text>
+</svg>
