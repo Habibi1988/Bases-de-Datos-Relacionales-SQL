@@ -1,0 +1,3 @@
+-- Exercise SQL implementation placeholder
+-- The SQL script will be added after the E/R diagram and relational model
+-- have been reviewed and approved.
