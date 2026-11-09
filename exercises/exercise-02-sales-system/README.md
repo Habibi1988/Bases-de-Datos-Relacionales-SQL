@@ -1,71 +1,51 @@
-# Ejercicio 2 — Sistema de ventas (Sales System)
+# Exercise 2 – Sales System (Sistema de Ventas)
 
-## Español
+## Objective
+Design and implement a relational database for a sales system using MySQL 8.4. The database stores customers, their contact telephone numbers, suppliers, product categories, products, invoices and the products included in each invoice.
 
-Este documento sigue el enunciado oficial de tres páginas **Ejercicios Modelo Entidad/Relación**, Ejercicio 2. La tarea consiste en modelar un sistema de ventas que gestione proveedores, clientes, productos y facturas.
+## Database
+- Database name: `ventas`
+- DBMS: MySQL 8.4
+- SQL scripts: `sql/`
 
-### Requisitos del enunciado
-- Un proveedor tiene CIF/NIF, nombre, dirección, teléfono y sitio web.
-- Un cliente tiene CIF/NIF, nombre y dirección, y puede tener varios teléfonos de contacto.
-- Una dirección consta de calle, número, ciudad y código postal.
-- Un producto tiene un identificador único, nombre, precio actual, stock y un proveedor.
-- Los productos se agrupan en categorías; cada producto pertenece a una sola categoría.
-- Una categoría tiene identificador, nombre y descripción.
-- Una factura registra número, fecha, cliente, descuento e importe final con IVA incluido.
-- Para cada producto vendido se registra el precio aplicado en el momento de la venta, la cantidad y el importe total de la línea.
+## Relational structure
 
-### Implementación SQL
-- [Script de esquema MySQL](sql/schema.sql)
+| Table | Purpose | Primary key |
+|---|---|---|
+| `clientes` | Customer details and address | `cif_nif` |
+| `telefonos_clientes` | Customer telephone numbers | `telefono` |
+| `proveedores` | Supplier details | `cif_nif` |
+| `categorias` | Product categories | `id_categoria` |
+| `productos` | Products, stock, current price, supplier and category | `id_productos` |
+| `facturas` | Invoice header and customer | `numero_factura` |
+| `facturas_productos` | Products and sale details for each invoice | Composite: `numero_factura`, `id_producto` |
 
-El script define proveedores y clientes identificados por CIF/NIF, una tabla independiente para los múltiples teléfonos de cada cliente, categorías, productos, facturas y líneas de detalle.
+## Main relationships
 
-### Diseño relacional
-| Tabla | Finalidad |
-|---|---|
-| `proveedor` | CIF/NIF, nombre, dirección, teléfono y web del proveedor |
-| `cliente` | CIF/NIF, nombre y dirección del cliente |
-| `cliente_telefono` | Varios teléfonos de contacto por cliente |
-| `categoria` | Identificador, nombre y descripción de categoría |
-| `producto` | Datos del producto y claves foráneas de proveedor y categoría |
-| `factura` | Número y fecha de factura, cliente, descuento e importe final con IVA |
-| `detalle_factura` | Productos de cada factura, precio de venta, cantidad e importe de línea |
+- One customer can have multiple telephone numbers.
+- One customer can have multiple invoices; each invoice belongs to one customer.
+- One supplier can supply multiple products; each product references one supplier.
+- One category can contain multiple products; each product references one category.
+- An invoice can contain multiple products, and a product can appear on multiple invoices. The junction table `facturas_productos` stores quantity, sale-time price and VAT for each invoice/product pair.
 
-El enunciado oficial **no** especifica una relación N:M directa entre facturas y proveedores, por lo que el esquema SQL actual no añade una tabla `factura_proveedor`. Cada producto referencia un proveedor y una categoría, tal como solicita el enunciado.
+## SQL files
 
-### Notas de implementación
-El enunciado oficial no determina los tipos de datos SQL ni los nombres exactos de los identificadores. Son decisiones de implementación reflejadas en `schema.sql`. El script se ha ajustado al enunciado escrito, pero todavía no se ha ejecutado en un servidor MySQL.
+- [`schema.sql`](sql/schema.sql): creates the `ventas` database and its seven tables, including primary keys, foreign keys and required-field constraints.
+- [`sample_data.sql`](sql/sample_data.sql): inserts example records into the seven tables.
 
-## English
+## How to run
 
-This note follows the official three-page assignment, **Ejercicios Modelo Entidad/Relación**, Exercise 2. The task is to model a sales system managing suppliers, customers, products and sales invoices.
+Run these scripts in MySQL Workbench in this order, on a **new or empty** database:
 
-### Requirements from the official statement
-- A supplier has CIF/NIF, name, address, telephone and website.
-- A customer has CIF/NIF, name and address, and may have multiple contact telephone numbers.
-- An address consists of street, number, city and postal code.
-- A product has a unique ID, name, current price, stock and one supplier.
-- Products are grouped into categories; each product belongs to exactly one category.
-- A category has an ID, name and description.
-- An invoice records its number, date, customer, discount and final amount including VAT.
-- For each product sold, the system records the sale-time price, quantity sold and total amount for that product line.
+1. Open and execute `sql/schema.sql`.
+2. Open and execute `sql/sample_data.sql`.
 
-### SQL implementation
-- [MySQL schema script](sql/schema.sql)
+**Important:** The sample-data script is intended to be run once. Running it again against the same populated database can produce duplicate-primary-key errors. Do not drop or recreate an existing database just to rerun the sample data.
 
-The script defines supplier and customer CIF/NIF identifiers, a separate table for a customer's multiple telephone numbers, categories, products, invoices and invoice detail lines.
+## Modelling note
 
-### Relational design
-| Table | Purpose |
-|---|---|
-| `proveedor` | Supplier CIF/NIF, name, address, telephone and website |
-| `cliente` | Customer CIF/NIF, name and address |
-| `cliente_telefono` | Multiple contact telephone numbers per customer |
-| `categoria` | Category ID, name and description |
-| `producto` | Product details plus supplier and category foreign keys |
-| `factura` | Invoice number/date, customer, discount and final amount including VAT |
-| `detalle_factura` | Products on each invoice, sale-time price, quantity and line total |
+The implementation follows the professor's Access diagram selected for this exercise. Two details in the written brief are not represented as attributes in that diagram: the supplier's street name and a separate line-total amount for each invoice product. They have therefore not been added to this schema. Confirm with the instructor if the written brief takes precedence over the diagram.
 
-The official statement does **not** specify a direct N:M relationship between invoices and suppliers, so the current SQL schema does not add an extra `factura_proveedor` table. A product references one supplier and one category, as required by the prompt.
+## Scope
 
-### Implementation notes
-The official statement does not dictate SQL data types or exact identifier names. Those are implementation choices in `schema.sql`. The script has been aligned to the written statement, but has not yet been executed against a MySQL server.
+This exercise documents the relational design and its MySQL implementation. The example records are demonstration data, not real customer or supplier information.
