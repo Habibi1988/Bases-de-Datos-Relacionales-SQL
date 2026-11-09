@@ -41,7 +41,7 @@ La implementación SQL, los datos de prueba, las consultas y los objetos avanzad
 │   ├── exercise-02-sales-system/
 │   ├── exercise-03-roads/
 │   ├── exercise-04-flight-system/
-│   └── exercise-05-to-be-defined/
+│   └── exercise-05-freight-transport/
 ├── 01-database-fundamentals/
 ├── 02-er-diagrams-and-relational-models/
 ├── 03-database-normalization/
@@ -95,7 +95,7 @@ SQL implementation, sample data, queries and advanced database objects will be a
 - [Exercise 2 — Sales System](exercises/exercise-02-sales-system/README.md)
 - [Exercise 3 — Roads](exercises/exercise-03-roads/README.md)
 - [Exercise 4 — Flight System](exercises/exercise-04-flight-system/README.md)
-- [Exercise 5 — To be defined](exercises/exercise-05-to-be-defined/README.md)
+- [Exercise 5 — Freight Transport Company](exercises/exercise-05-freight-transport/README.md)
 
 ### Course information
 - **Course:** Programació amb SQL i bases de dades relacionals (IFCD47)
