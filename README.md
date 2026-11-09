@@ -90,10 +90,12 @@ The approved logical model contains **15 tables** for product categories, produc
 SQL implementation, sample data, queries and advanced database objects will be addressed in later stages.
 
 ### Course exercises
+- [Browse all five practical exercises](ejercicios/README.md)
 - [Exercise 1 — Articles and Orders](ejercicios/ejercicio-1/README.md)
-- [Exercise 2 — Invoices and Products](ejercicios/ejercicio-2/README.md)
+- [Exercise 2 — Sales System](ejercicios/ejercicio-2/README.md)
 - [Exercise 3 — Roads](ejercicios/ejercicio-3/README.md)
 - [Exercise 4 — Flight System](ejercicios/ejercicio-4/README.md)
+- [Exercise 5 — To be defined](ejercicios/ejercicio-5/README.md)
 
 ### Course information
 - **Course:** Programació amb SQL i bases de dades relacionals (IFCD47)
