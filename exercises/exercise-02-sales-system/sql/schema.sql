@@ -3,93 +3,169 @@
 -- Based on the official exercise statement (Ejercicios Modelo Entidad/Relación).
 -- Data types and identifiers are implementation choices where the prompt is silent.
 
-CREATE DATABASE IF NOT EXISTS cifo_exercise_2;
-USE cifo_exercise_2;
+CREATE DATABASE IF NOT EXISTS ventas;
 
-CREATE TABLE IF NOT EXISTS proveedor (
-    cif_nif VARCHAR(20) NOT NULL,
-    nombre VARCHAR(150) NOT NULL,
-    calle VARCHAR(150) NOT NULL,
-    numero VARCHAR(20) NOT NULL,
-    ciudad VARCHAR(100) NOT NULL,
-    codigo_postal VARCHAR(15) NOT NULL,
-    telefono VARCHAR(30) NOT NULL,
-    pagina_web VARCHAR(255) NULL,
-    CONSTRAINT pk_proveedor PRIMARY KEY (cif_nif)
-) ENGINE=InnoDB;
+USE ventas;
+CREATE TABLE IF NOT EXISTS clientes(
+    cif_nif VARCHAR(15) PRIMARY KEY,
+    nombre VARCHAR(100),
+    calle VARCHAR (100),
+    nomero VARCHAR(10),
+    ciudad VARCHAR(60),
+    codigo_postal VARCHAR(10)
+);
 
-CREATE TABLE IF NOT EXISTS cliente (
-    cif_nif VARCHAR(20) NOT NULL,
-    nombre VARCHAR(150) NOT NULL,
-    calle VARCHAR(150) NOT NULL,
-    numero VARCHAR(20) NOT NULL,
-    ciudad VARCHAR(100) NOT NULL,
-    codigo_postal VARCHAR(15) NOT NULL,
-    CONSTRAINT pk_cliente PRIMARY KEY (cif_nif)
-) ENGINE=InnoDB;
+ALTER TABLE clientes
+RENAME COLUMN nomero TO numero;
 
--- A client may have several contact telephone numbers.
-CREATE TABLE IF NOT EXISTS cliente_telefono (
-    cif_nif_cliente VARCHAR(20) NOT NULL,
-    telefono VARCHAR(30) NOT NULL,
-    CONSTRAINT pk_cliente_telefono PRIMARY KEY (cif_nif_cliente, telefono),
-    CONSTRAINT fk_cliente_telefono_cliente
-        FOREIGN KEY (cif_nif_cliente) REFERENCES cliente (cif_nif)
-) ENGINE=InnoDB;
 
-CREATE TABLE IF NOT EXISTS categoria (
-    id_categoria INT UNSIGNED NOT NULL,
-    nombre VARCHAR(120) NOT NULL,
-    descripcion VARCHAR(255) NULL,
-    CONSTRAINT pk_categoria PRIMARY KEY (id_categoria)
-) ENGINE=InnoDB;
+CREATE TABLE IF NOT EXISTS telefono_cliente(
+    cif_nif VARCHAR(15),
+    telefono VARCHAR(20) PRIMARY KEY,
+    FOREIGN KEY(cif_nif)
+    REFERENCES clientes(cif_nif)
+);
 
--- Each product has exactly one supplier and belongs to one category.
-CREATE TABLE IF NOT EXISTS producto (
-    id_producto INT UNSIGNED NOT NULL,
-    nombre VARCHAR(150) NOT NULL,
-    precio_actual DECIMAL(12,2) NOT NULL,
-    stock INT UNSIGNED NOT NULL DEFAULT 0,
-    cif_nif_proveedor VARCHAR(20) NOT NULL,
-    id_categoria INT UNSIGNED NOT NULL,
-    CONSTRAINT pk_producto PRIMARY KEY (id_producto),
-    CONSTRAINT chk_producto_precio CHECK (precio_actual >= 0),
-    CONSTRAINT fk_producto_proveedor
-        FOREIGN KEY (cif_nif_proveedor) REFERENCES proveedor (cif_nif),
-    CONSTRAINT fk_producto_categoria
-        FOREIGN KEY (id_categoria) REFERENCES categoria (id_categoria)
-) ENGINE=InnoDB;
+ALTER TABLE telefono_cliente
+MODIFY cif_nif VARCHAR(15) NOT NULL;
 
-CREATE TABLE IF NOT EXISTS factura (
-    numero_factura INT UNSIGNED NOT NULL,
-    fecha DATETIME NOT NULL,
-    cif_nif_cliente VARCHAR(20) NOT NULL,
-    descuento DECIMAL(5,2) NOT NULL DEFAULT 0,
-    importe_final_con_iva DECIMAL(14,2) NOT NULL,
-    CONSTRAINT pk_factura PRIMARY KEY (numero_factura),
-    CONSTRAINT chk_factura_descuento CHECK (descuento >= 0 AND descuento <= 100),
-    CONSTRAINT chk_factura_importe CHECK (importe_final_con_iva >= 0),
-    CONSTRAINT fk_factura_cliente
-        FOREIGN KEY (cif_nif_cliente) REFERENCES cliente (cif_nif)
-) ENGINE=InnoDB;
+RENAME TABLE telefono_cliente TO telefonos_clientes;
 
--- Store the price at the moment of sale, quantity, and product line total.
-CREATE TABLE IF NOT EXISTS detalle_factura (
-    numero_factura INT UNSIGNED NOT NULL,
-    id_producto INT UNSIGNED NOT NULL,
-    precio_venta DECIMAL(12,2) NOT NULL,
-    cantidad INT UNSIGNED NOT NULL,
-    importe_total_producto DECIMAL(14,2) NOT NULL,
-    CONSTRAINT pk_detalle_factura PRIMARY KEY (numero_factura, id_producto),
-    CONSTRAINT chk_detalle_factura_precio CHECK (precio_venta >= 0),
-    CONSTRAINT chk_detalle_factura_cantidad CHECK (cantidad > 0),
-    CONSTRAINT chk_detalle_factura_importe CHECK (importe_total_producto >= 0),
-    CONSTRAINT fk_detalle_factura_factura
-        FOREIGN KEY (numero_factura) REFERENCES factura (numero_factura),
-    CONSTRAINT fk_detalle_factura_producto
-        FOREIGN KEY (id_producto) REFERENCES producto (id_producto)
-) ENGINE=InnoDB;
+ALTER TABLE telefono_cliente
+ADD CONSTRAINT fk_telefono_cliente_cliente
+FOREIGN KEY (cif_nif)
+REFERENCES clientes(cif_nif);
 
--- The official prompt does not specify an invoice-to-supplier relationship.
--- No such extra relation is introduced here.
--- No sample data is inserted.
+
+CREATE TABLE IF NOT EXISTS categorias(
+    id_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_categoria VARCHAR(100) NOT NULL,
+    descripcion VARCHAR(255)
+);
+
+
+CREATE TABLE IF NOT EXISTS proveedores(
+    cif_nif VARCHAR(15)  PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    telefono VARCHAR(20),
+    web VARCHAR(255),
+    numero VARCHAR(10),
+    ciudad VARCHAR(60),
+    codigo_postal VARCHAR(10)
+);
+
+
+CREATE TABLE IF NOT EXISTS productos(
+    id_productos INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    stock INT,
+    precio_actual DECIMAL(10,2),
+    fk_cif_nif_proveedor VARCHAR(15),
+    fk_id_categorias INT,
+
+    FOREIGN KEY (fk_cif_nif_proveedor)
+    REFERENCES proveedores(cif_nif),
+
+    FOREIGN KEY (fk_id_categorias)
+    REFERENCES categorias(id_categoria)
+);
+
+CREATE TABLE IF NOT EXISTS facturas(
+    numero_factura INT PRIMARY KEY AUTO_INCREMENT,
+    fecha DATE NOT NULL,
+    descuento DECIMAL(10,2),
+    importe_final DECIMAL(10,2),
+    fk_cif_nif_clientes VARCHAR(15),
+
+    FOREIGN KEY (fk_cif_nif_clientes)
+    REFERENCES clientes(cif_nif)
+);
+
+
+
+CREATE TABLE IF NOT EXISTS factura_productos (
+    numero_factura INT,
+    id_producto INT,
+    cantidad INT,
+    precio DECIMAL(20,2),
+    iva DECIMAL(5,2),
+
+    PRIMARY KEY (numero_factura, id_producto),
+
+    FOREIGN KEY (numero_factura)
+        REFERENCES facturas(numero_factura),
+
+    FOREIGN KEY (id_producto)
+        REFERENCES productos(id_productos)
+);
+
+USE ventas;
+
+INSERT INTO clientes
+(cif_nif, nombre, calle, numero, ciudad, codigo_postal)
+VALUES
+('12345678A', 'Carlos Garcia', 'Calle Mayor', '10', 'Barcelona', '08001'),
+('87654321B', 'Maria Lopez', 'Calle Marina', '25', 'Badalona', '08912');
+
+SELECT * FROM clientes;
+
+RENAME TABLE factura_productos TO facturas_productos;
+
+INSERT INTO proveedores
+(cif_nif, nombre, telefono, web, numero, ciudad, codigo_postal)
+VALUES
+('B12345678', 'Tech Solutions', '931234567', 'www.techsolutions.com', '15', 'Barcelona', '08002'),
+('B87654321', 'Global Supplies', '934567890', 'www.globalsupplies.com', '20', 'Badalona', '08911');
+
+SELECT * FROM proveedores;
+
+INSERT INTO categorias
+(nombre_categoria, descripcion)
+VALUES
+('Electronics', 'Electronic devices and accessories'),
+('Computers', 'Computers and computer components'),
+('Office Supplies', 'Products for office use');
+
+SELECT * FROM categorias;
+
+INSERT INTO productos
+(nombre, stock, precio_actual, fk_cif_nif_proveedor, fk_id_categorias)
+VALUES
+('Laptop Lenovo', 15, 750.00, 'B12345678', 1),
+('Samsung Monitor', 20, 180.00, 'B12345678', 1),
+('Office Computer', 10, 950.00, 'B87654321', 2),
+('Office Chair', 25, 120.00, 'B87654321', 3);
+
+SELECT * FROM productos;
+
+INSERT INTO telefonos_clientes
+(cif_nif, telefono)
+VALUES
+('12345678A', '600123456'),
+('12345678A', '600123457'),
+('87654321B', '611123456');
+
+SELECT * from telefonos_clientes;
+
+INSERT INTO facturas
+(fecha, descuento, importe_final, fk_cif_nif_clientes)
+VALUES
+('2026-11-01', 5.00, 1100.00, '12345678A'),
+('2026-11-02', 10.00, 950.00, '87654321B');
+ SELECT * FROM facturas;
+
+INSERT INTO facturas_productos
+(numero_factura, id_producto, cantidad, precio, iva)
+VALUES
+(1, 1, 1, 750.00, 21.00),
+(1, 2, 2, 180.00, 21.00),
+(2, 3, 1, 950.00, 21.00),
+(2, 4, 2, 120.00, 21.00);
+
+SELECT * FROM facturas_productos;
+
+
+
+
+
+
