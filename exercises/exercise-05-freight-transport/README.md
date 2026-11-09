@@ -14,6 +14,14 @@ Este ejercicio plantea el diseño de una base de datos para una **empresa de tra
 4. **Tramos:** cada viaje se divide en tramos con número de orden, distancia en kilómetros, fecha de inicio y fecha de fin. El número de tramo es relativo al viaje; por tanto, la identificación del tramo debe tener en cuenta el viaje al que pertenece. Al eliminar un viaje, se eliminan sus tramos.
 5. **Gestión:** la relación entre administrativos y viajes es muchos a muchos: un administrativo puede gestionar varios viajes y un viaje puede ser gestionado por varios administrativos.
 
+### Entregables actuales
+
+- [Diagrama Entidad–Relación (SVG)](er-diagram/ER-Diagram-Freight-Transport.svg)
+- [Modelo relacional (Markdown)](relational-model/Relational-Model-Freight-Transport.md)
+- [Archivo SQL preparado](sql/schema.sql) — pendiente de implementación.
+
+El diseño se basa en el enunciado PDF y en la captura de relaciones de Access. Los campos o restricciones que no pueden confirmarse con la captura están señalados para revisión.
+
 ### Estructura prevista
 
 - `er-diagram/`: diagrama Entidad–Relación.
@@ -24,7 +32,7 @@ Este ejercicio plantea el diseño de una base de datos para una **empresa de tra
 
 ### Estado
 
-El enunciado está disponible. El archivo Access proporcionado se conserva como material de trabajo; su estructura interna debe revisarse antes de documentar tablas o consultas existentes. No se afirma que el esquema SQL esté implementado o validado.
+El diagrama E/R y el modelo relacional están preparados a partir de la captura de relaciones de Access y del enunciado. El script SQL está creado como archivo pendiente; todavía no contiene la implementación. Antes de implementar SQL, deben verificarse los campos y restricciones señalados en el modelo.
 
 ## English
 
@@ -45,6 +53,14 @@ This exercise covers the database design for a **freight transport company**, ba
 
 The diagram and relational model are based on the Access Relationships screenshot and the assignment PDF. Items not visible in the screenshot are explicitly marked for verification.
 
+### Current deliverables
+
+- [Entity–Relationship diagram (SVG)](er-diagram/ER-Diagram-Freight-Transport.svg)
+- [Relational model (Markdown)](relational-model/Relational-Model-Freight-Transport.md)
+- [SQL file placeholder](sql/schema.sql) — implementation pending.
+
+The design is based on the assignment PDF and the Access Relationships screenshot. Fields or constraints that cannot be confirmed from the screenshot are flagged for review.
+
 ### Planned structure
 
 - `er-diagram/`: Entity–Relationship diagram.
@@ -55,4 +71,4 @@ The diagram and relational model are based on the Access Relationships screensho
 
 ### Status
 
-The assignment statement is available. The supplied Access file is retained as working material; its internal structure must be inspected before documenting any existing tables or queries. No SQL implementation or validation is claimed yet.
+The E/R diagram and relational model have been prepared from the Access Relationships screenshot and the assignment statement. The SQL file is present as a placeholder and does not yet contain the implementation. The fields and constraints flagged in the relational model should be verified before SQL development.
