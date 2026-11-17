@@ -10,7 +10,7 @@ Portafolio práctico sobre diseño de bases de datos, modelado relacional y desa
 ### Proyecto final destacado
 **Base de Datos para una Tienda de Moda Omnicanal**
 
-Proyecto educativo independiente inspirado en el modelo de negocio omnicanal de UNIQLO. No es una base de datos oficial ni representa sus sistemas internos.
+Proyecto educativo independiente centrado en la gestión omnicanal de una tienda de moda.
 
 El modelo lógico aprobado contiene **15 tablas** para categorías, subtipos de producto (ISA Total y Disjunta), variantes y SKU, públicos objetivo, sucursales, inventario, clientes, ventas, líneas de venta y pagos.
 
@@ -76,7 +76,7 @@ This practical portfolio documents database design, relational modelling and SQL
 ### Featured final project
 **Omnichannel Fashion Retail Database — **
 
-An independent educational project independent's omnichannel retail business model. It is not an official database and does not represent UNIQLO's internal systems.
+An independent educational project focused on omnichannel fashion retail operations.
 
 The approved logical model contains **15 tables** for product categories, product subtypes (ISA Total and Disjoint), variants and SKUs, target audiences, stores, inventory, customers, sales, sales lines and payments.
 
