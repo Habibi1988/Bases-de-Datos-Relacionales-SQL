@@ -61,7 +61,7 @@ El trabajo actual cubre el diseño conceptual y lógico. La implementación SQL,
 ### Project identity
 **Design and Implementation of a Database for Omnichannel Product, Inventory and Sales Management in a Fashion Retail Store**
 
-A portfolio database project an independent educational design focused on omnichannel fashion retail operations.
+An independent educational database design focused on omnichannel fashion retail operations.
 
 ### Approved business scope and rules
 - Product specializations: ROPA, CALZADO and COMPLEMENTOS.
