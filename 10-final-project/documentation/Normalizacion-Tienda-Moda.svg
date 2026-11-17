@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+<defs><style>
+.h1{font:700 32px Arial;fill:#fff}.sub{font:16px Arial;fill:#dce8f8}.h2{font:700 21px Arial;fill:#17324f}.h3{font:700 17px Arial;fill:#17324f}.p{font:14px Arial;fill:#334155}.small{font:12px Arial;fill:#64748b}.pill{font:700 13px Arial;fill:#fff}
+</style></defs>
+<rect width="1600" height="1100" fill="#f1f5f9"/>
+<rect x="28" y="24" width="1544" height="92" rx="18" fill="#12345b"/>
+<text x="800" y="65" text-anchor="middle" class="h1">NORMALIZACIÓN — MODELO DE TIENDA DE MODA OMNICANAL</text>
+<text x="800" y="91" text-anchor="middle" class="sub">Verificación del diseño relacional · Primera, segunda y tercera forma normal</text>
+<rect x="35" y="145" width="490" height="590" rx="18" fill="#e8f5ed" stroke="#b9dfc6" stroke-width="2"/>
+<rect x="555" y="145" width="490" height="590" rx="18" fill="#e9f2ff" stroke="#bfd5f4" stroke-width="2"/>
+<rect x="1075" y="145" width="490" height="590" rx="18" fill="#fff1e5" stroke="#f1d1b7" stroke-width="2"/>
+<rect x="65" y="170" width="115" height="34" rx="17" fill="#21834b"/><text x="122" y="192" text-anchor="middle" class="pill">1FN</text>
+<text x="65" y="240" class="h2">Primera Forma Normal</text>
+<text x="65" y="278" class="p">• Cada campo contiene un valor atómico.</text>
+<text x="65" y="310" class="p">• No se guardan listas de tallas o colores</text><text x="82" y="332" class="p">en una única celda.</text>
+<text x="65" y="370" class="p">• Cada variante ocupa su propio registro.</text>
+<text x="65" y="408" class="p">• Cada relación producto–público se</text><text x="82" y="430" class="p">representa en una fila de la tabla puente.</text>
+<rect x="65" y="485" width="420" height="190" rx="12" fill="#fff" stroke="#cbd5e1"/>
+<text x="88" y="520" class="h3">Ejemplo: VARIANTES_PRODUCTO</text>
+<text x="88" y="556" class="p">CAM-BLA-M | Blanco | M</text>
+<text x="88" y="584" class="p">CAM-NEG-M | Negro | M</text>
+<text x="88" y="612" class="p">CAM-BLA-L | Blanco | L</text>
+<text x="88" y="650" class="small">Una fila representa una combinación SKU/color/talla.</text>
+<rect x="585" y="170" width="115" height="34" rx="17" fill="#2368b8"/><text x="642" y="192" text-anchor="middle" class="pill">2FN</text>
+<text x="585" y="240" class="h2">Segunda Forma Normal</text>
+<text x="585" y="278" class="p">• Primero debe cumplirse 1FN.</text>
+<text x="585" y="316" class="p">• Los atributos no clave dependen de</text><text x="602" y="338" class="p">toda la clave candidata, no de una parte.</text>
+<text x="585" y="376" class="p">• La tabla con PK compuesta</text><text x="602" y="398" class="p">PRODUCTO_PUBLICO no tiene atributos</text><text x="602" y="420" class="p">no clave: no existe dependencia parcial.</text>
+<rect x="585" y="485" width="420" height="190" rx="12" fill="#fff" stroke="#cbd5e1"/>
+<text x="608" y="520" class="h3">PRODUCTO_PUBLICO</text>
+<text x="608" y="556" class="p">PK (fk_producto, fk_publico)</text>
+<text x="608" y="584" class="p">No contiene nombre_producto ni</text>
+<text x="608" y="606" class="p">nombre_publico duplicados.</text>
+<text x="608" y="650" class="small">Los datos descriptivos permanecen en sus tablas.</text>
+<rect x="1105" y="170" width="115" height="34" rx="17" fill="#c66a20"/><text x="1162" y="192" text-anchor="middle" class="pill">3FN</text>
+<text x="1105" y="240" class="h2">Tercera Forma Normal</text>
+<text x="1105" y="278" class="p">• Primero debe cumplirse 2FN.</text>
+<text x="1105" y="316" class="p">• Los atributos no clave dependen de</text><text x="1122" y="338" class="p">la clave y no de otro atributo no clave.</text>
+<text x="1105" y="376" class="p">• Categoría, sucursal y cliente tienen</text><text x="1122" y="398" class="p">sus propios datos descriptivos.</text>
+<text x="1105" y="436" class="p">• Los datos de categoría no se repiten</text><text x="1122" y="458" class="p">en PRODUCTOS; se referencian mediante FK.</text>
+<rect x="1105" y="485" width="420" height="190" rx="12" fill="#fff" stroke="#cbd5e1"/>
+<text x="1128" y="520" class="h3">Separación de dependencias</text>
+<text x="1128" y="556" class="p">PRODUCTOS → fk_subcategoria</text>
+<text x="1128" y="584" class="p">SUBCATEGORIAS → fk_categoria</text>
+<text x="1128" y="612" class="p">CATEGORIAS → nombre_categoria</text>
+<text x="1128" y="650" class="small">No se almacenan nombres de categoría en PRODUCTOS.</text>
+<rect x="35" y="770" width="1530" height="260" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="65" y="812" class="h2">Verificaciones complementarias del diseño</text>
+<text x="65" y="855" class="p">• INVENTARIO: clave candidata UNIQUE (fk_variante, fk_sucursal); cantidad_disponible y stock_minimo dependen de la combinación.</text>
+<text x="65" y="892" class="p">• DETALLE_VENTA: precio_unitario y porcentaje_iva son una instantánea de la línea de venta, para conservar el histórico.</text>
+<text x="65" y="929" class="p">• VARIANTES_PRODUCTO: precio_variante es opcional; si es NULL, se aplica precio_base del producto como regla de negocio.</text>
+<text x="65" y="966" class="p">• PRODUCTO_PUBLICO: tabla puente sin atributos descriptivos repetidos; su PK compuesta impide duplicar la misma asociación.</text>
+<text x="800" y="1070" text-anchor="middle" class="small">Conclusión: el esquema está diseñado para cumplir 1FN, 2FN y 3FN bajo las dependencias funcionales y reglas documentadas.</text>
+</svg>
