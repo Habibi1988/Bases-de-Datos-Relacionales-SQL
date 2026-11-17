@@ -28,7 +28,7 @@ CATEGORIAS, SUBCATEGORIAS, PRODUCTOS, ROPA, CALZADO, COMPLEMENTOS, VARIANTES_PRO
 ### Documentación y entregables
 
 **Modelo conceptual**
-- [Diagrama Entidad–Relación (SVG)](er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.svg)
+- [Diagrama Entidad–Relación (SVG)](er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.pdf)
 
 **Modelo lógico**
 - [Diagrama del Modelo Relacional (PDF)](relational-model/Modelo-Relacional-15-Tablas.pdf)
@@ -84,14 +84,14 @@ CATEGORIAS, SUBCATEGORIAS, PRODUCTOS, ROPA, CALZADO, COMPLEMENTOS, VARIANTES_PRO
 ### Documentation and deliverables
 
 **Conceptual model**
-- [Entity–Relationship diagram (SVG)](er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.svg)
+- [Entity–Relationship diagram (PDF)](er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.pdf)
 
 **Logical model**
 - [Relational Model diagram (PDF)](relational-model/Modelo-Relacional-15-Tablas.pdf)
 - [Full Relational Model specification (Markdown)](relational-model/Modelo-Relacional-Tienda-Moda.md)
 
 **Normalization**
-- [Normalization diagram (SVG)](documentation/Normalizacion-Tienda-Moda.svg)
+- [Normalization diagram (PDF)](documentation/Normalizacion-Tienda-Moda.svg)
 - [Normalization analysis (Markdown)](documentation/Normalizacion-Tienda-Moda.md)
 
 ### Course scope and status
