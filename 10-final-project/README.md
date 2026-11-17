@@ -5,7 +5,7 @@
 ### Identificación del proyecto
 **Diseño e Implementación de una Base de Datos para la Gestión Omnicanal de Productos, Inventario y Ventas de una Tienda de Moda**
 
-Proyecto académico de portafolio proyecto educativo independiente centrado en la gestión omnicanal de una tienda de moda.
+Proyecto educativo independiente centrado en la gestión omnicanal de una tienda de moda.
 
 ### Alcance y reglas de negocio aprobadas
 - Especializaciones de producto: ROPA, CALZADO y COMPLEMENTOS.
