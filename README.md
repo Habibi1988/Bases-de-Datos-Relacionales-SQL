@@ -16,7 +16,7 @@ El modelo lógico aprobado contiene **15 tablas** para categorías, subtipos de 
 
 ### Entregables
 - [Resumen del proyecto](10-final-project/README.md)
-- [Diagrama Entidad–Relación (PDF)](10-final-project/er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.svg)
+- [Diagrama Entidad–Relación (SVG)](10-final-project/er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.svg)
 - [Diagrama del Modelo Relacional (PDF)](10-final-project/relational-model/Modelo-Relacional-15-Tablas.pdf)
 - [Especificación del Modelo Relacional](10-final-project/relational-model/Modelo-Relacional-Tienda-Moda.md)
 - [Diagrama de Normalización (SVG)](10-final-project/documentation/Normalizacion-Tienda-Moda.svg)
@@ -74,7 +74,7 @@ La implementación SQL, los datos de prueba, las consultas y los objetos avanzad
 This practical portfolio documents database design, relational modelling and SQL development completed as part of the **Programació amb SQL i bases de dades relacionals (IFCD47)** course at **CIFO La Violeta, Barcelona**.
 
 ### Featured final project
-**Omnichannel Fashion Retail Database — **
+**Omnichannel Fashion Retail Database**
 
 An independent educational project focused on omnichannel fashion retail operations.
 
@@ -82,7 +82,7 @@ The approved logical model contains **15 tables** for product categories, produc
 
 ### Deliverables
 - [Final project overview](10-final-project/README.md)
-- [Entity–Relationship diagram (PDF)](10-final-project/er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.svg)
+- [Entity–Relationship diagram (SVG)](10-final-project/er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.svg)
 - [Relational Model diagram (PDF)](10-final-project/relational-model/Modelo-Relacional-15-Tablas.pdf)
 - [Relational Model specification](10-final-project/relational-model/Modelo-Relacional-Tienda-Moda.md)
 - [Normalization diagram (SVG)](10-final-project/documentation/Normalizacion-Tienda-Moda.svg)
