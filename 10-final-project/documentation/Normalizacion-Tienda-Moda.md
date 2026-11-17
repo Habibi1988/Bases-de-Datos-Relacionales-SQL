@@ -1,12 +1,12 @@
 # Normalización — Tienda de Moda Omnicanal
 
-> Análisis del esquema relacional académico inspirado en . Se estudian las formas normales sobre las 15 tablas aprobadas; no se afirma que sea el esquema oficial de .
+> Análisis del esquema relacional académico de una tienda de moda omnicanal. Se estudian las formas normales sobre las 15 tablas aprobadas.
 
 ## Diagrama
 
-![Normalización 1FN 2FN 3FN](Normalizacion-.svg)
+![Normalización 1FN 2FN 3FN](Normalizacion-Tienda-Moda.svg)
 
-[Ver diagrama SVG](Normalizacion-.svg)
+[Ver diagrama SVG](Normalizacion-Tienda-Moda.svg)
 
 ## Objetivo
 Comprobar que los atributos estén organizados para reducir redundancia, evitar anomalías de inserción/actualización/borrado y mantener dependencias coherentes.
