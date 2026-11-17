@@ -5,7 +5,7 @@
 ### Identificación del proyecto
 **Diseño e Implementación de una Base de Datos para la Gestión Omnicanal de Productos, Inventario y Ventas de una Tienda de Moda**
 
-Proyecto académico de portafolio inspirado en el modelo de negocio omnicanal de UNIQLO. Es un diseño educativo independiente; no es la base de datos oficial de UNIQLO, no representa su esquema interno ni afirma describir sus sistemas.
+Proyecto académico de portafolio proyecto educativo independiente centrado en la gestión omnicanal de una tienda de moda.
 
 ### Alcance y reglas de negocio aprobadas
 - Especializaciones de producto: ROPA, CALZADO y COMPLEMENTOS.
@@ -28,15 +28,15 @@ CATEGORIAS, SUBCATEGORIAS, PRODUCTOS, ROPA, CALZADO, COMPLEMENTOS, VARIANTES_PRO
 ### Documentación y entregables
 
 **Modelo conceptual**
-- [Diagrama Entidad–Relación (PDF)](er-diagram/Diagrama-ER-UNIQLO.pdf)
+- [Diagrama Entidad–Relación (PDF)](er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.svg)
 
 **Modelo lógico**
-- [Diagrama del Modelo Relacional (PDF)](relational-model/Modelo-Relacional-UNIQLO.pdf)
-- [Especificación completa del Modelo Relacional (Markdown)](relational-model/Modelo-Relacional-UNIQLO.md)
+- [Diagrama del Modelo Relacional (PDF)](relational-model/Modelo-Relacional-15-Tablas.pdf)
+- [Especificación completa del Modelo Relacional (Markdown)](relational-model/Modelo-Relacional-Tienda-Moda.md)
 
 **Normalización**
-- [Diagrama de normalización (SVG)](documentation/Normalizacion-UNIQLO.svg)
-- [Análisis de normalización (Markdown)](documentation/Normalizacion-UNIQLO.md)
+- [Diagrama de normalización (SVG)](documentation/Normalizacion-Tienda-Moda.svg)
+- [Análisis de normalización (Markdown)](documentation/Normalizacion-Tienda-Moda.md)
 
 ### Alcance del curso y estado
 El trabajo actual cubre el diseño conceptual y lógico. La implementación SQL, los datos de prueba, las consultas, las vistas, los triggers, los procedimientos almacenados, los eventos y los permisos corresponden a etapas posteriores y no se presentan como completados.
@@ -55,15 +55,13 @@ El trabajo actual cubre el diseño conceptual y lógico. La implementación SQL,
 - **Curso:** Programació amb SQL i bases de dades relacionals (IFCD47)
 - **Centro:** CIFO La Violeta, Barcelona
 
-### Archivos históricos
-Los primeros documentos y diagramas genéricos de la tienda omnicanal se conservan como trabajos anteriores del curso. Los artefactos actuales del proyecto inspirado en UNIQLO —modelo de 15 tablas, diagramas y especificaciones— sustituyen aquellas versiones preliminares como diseño vigente del proyecto final.
 
 ## English
 
 ### Project identity
 **Design and Implementation of a Database for Omnichannel Product, Inventory and Sales Management in a Fashion Retail Store**
 
-A portfolio database project inspired by UNIQLO's omnichannel retail business model. This is an independent educational design; it is not UNIQLO's official database, internal schema or a claim about its systems.
+A portfolio database project an independent educational design focused on omnichannel fashion retail operations.
 
 ### Approved business scope and rules
 - Product specializations: ROPA, CALZADO and COMPLEMENTOS.
@@ -86,15 +84,15 @@ CATEGORIAS, SUBCATEGORIAS, PRODUCTOS, ROPA, CALZADO, COMPLEMENTOS, VARIANTES_PRO
 ### Documentation and deliverables
 
 **Conceptual model**
-- [Entity–Relationship diagram (PDF)](er-diagram/Diagrama-ER-UNIQLO.pdf)
+- [Entity–Relationship diagram (PDF)](er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.svg)
 
 **Logical model**
-- [Relational Model diagram (PDF)](relational-model/Modelo-Relacional-UNIQLO.pdf)
-- [Full Relational Model specification (Markdown)](relational-model/Modelo-Relacional-UNIQLO.md)
+- [Relational Model diagram (PDF)](relational-model/Modelo-Relacional-15-Tablas.pdf)
+- [Full Relational Model specification (Markdown)](relational-model/Modelo-Relacional-Tienda-Moda.md)
 
 **Normalization**
-- [Normalization diagram (SVG)](documentation/Normalizacion-UNIQLO.svg)
-- [Normalization analysis (Markdown)](documentation/Normalizacion-UNIQLO.md)
+- [Normalization diagram (SVG)](documentation/Normalizacion-Tienda-Moda.svg)
+- [Normalization analysis (Markdown)](documentation/Normalizacion-Tienda-Moda.md)
 
 ### Course scope and status
 The current work covers conceptual and logical database design. SQL implementation, sample data, queries, views, triggers, stored procedures, events and permissions belong to later stages and are not presented as completed.
@@ -113,5 +111,3 @@ The current work covers conceptual and logical database design. SQL implementati
 - **Course:** Programació amb SQL i bases de dades relacionals (IFCD47)
 - **Institution:** CIFO La Violeta, Barcelona
 
-### Historical files
-Earlier generic omnichannel-retail reports and diagrams are retained as previous course work. The current UNIQLO-inspired project artefacts — 15-table model, diagrams and specifications — supersede those preliminary versions as the active final-project design.
