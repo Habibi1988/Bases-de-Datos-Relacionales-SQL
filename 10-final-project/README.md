@@ -28,7 +28,7 @@ CATEGORIAS, SUBCATEGORIAS, PRODUCTOS, ROPA, CALZADO, COMPLEMENTOS, VARIANTES_PRO
 ### Documentación y entregables
 
 **Modelo conceptual**
-- [Diagrama Entidad–Relación (PDF)](er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.svg)
+- [Diagrama Entidad–Relación (SVG)](er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.svg)
 
 **Modelo lógico**
 - [Diagrama del Modelo Relacional (PDF)](relational-model/Modelo-Relacional-15-Tablas.pdf)
@@ -84,7 +84,7 @@ CATEGORIAS, SUBCATEGORIAS, PRODUCTOS, ROPA, CALZADO, COMPLEMENTOS, VARIANTES_PRO
 ### Documentation and deliverables
 
 **Conceptual model**
-- [Entity–Relationship diagram (PDF)](er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.svg)
+- [Entity–Relationship diagram (SVG)](er-diagram/Diagrama-ER-Tienda-Moda-Omnicanal.svg)
 
 **Logical model**
 - [Relational Model diagram (PDF)](relational-model/Modelo-Relacional-15-Tablas.pdf)
