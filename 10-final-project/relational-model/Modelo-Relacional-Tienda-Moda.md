@@ -1,12 +1,12 @@
 # Modelo Relacional — Tienda de Moda Omnicanal
 
-> Proyecto académico inspirado en el modelo de negocio omnicanal de . No representa el esquema interno ni los sistemas oficiales de .
+> Proyecto académico independiente para la gestión omnicanal de una tienda de moda.
 
 ## Diagrama
 
-![Modelo relacional](Modelo-Relacional-.svg)
+![Modelo relacional](Modelo-Relacional-15-Tablas.pdf)
 
-[Ver diagrama SVG](Modelo-Relacional-.svg)
+[Ver diagrama PDF](Modelo-Relacional-15-Tablas.pdf)
 
 ## Convenciones
 - **PK**: clave primaria.
