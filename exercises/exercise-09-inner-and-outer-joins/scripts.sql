@@ -305,7 +305,180 @@ WHERE c.ciudad = 'Fuenlabrada';
 
 
 
+-- 7. Devuelve el nombre de los clientes y el nombre de sus representantes junto con la
+-- ciudad de la oficina a la que pertenece el representante.
 
+SELECT 
+    c.nombre_cliente,
+    e.nombre,
+    o.ciudad
+FROM empleado AS e
+INNER JOIN cliente AS c
+    ON c.fk_representante_ventas = e.pk_empleado
+INNER JOIN oficina AS o
+
+    ON o.pk_oficina = e.fk_oficina;
+ 
+-- 8. Devuelve un listado con el nombre de los empleados junto con el nombre de sus jefes.
+
+SELECT 
+    e.nombre AS empleado,
+    j.nombre AS jefe
+FROM empleado AS e
+LEFT JOIN empleado AS j
+    ON e.fk_jefe = j.pk_empleado;
+
+
+-- 9. Devuelve el nombre de los clientes a los que no se les ha entregado a tiempo un pedido.
+
+SELECT 
+    c.nombre_cliente
+FROM cliente AS c
+INNER JOIN pedido AS p
+    ON p.fk_cliente = c.pk_cliente
+WHERE p.fecha_entrega > p.fecha_esperada;
+
+-- 10.Devuelve un listado de las diferentes gamas de producto que ha comprado cada cliente.
+
+SELECT DISTINCT
+    c.nombre_cliente,
+    g.gama
+FROM cliente AS c
+INNER JOIN pedido AS pe
+    ON c.pk_cliente = pe.fk_cliente
+INNER JOIN detalle_pedido AS de
+    ON pe.pk_pedido = de.fk_pedido
+INNER JOIN producto AS p
+    ON p.pk_producto = de.fk_producto
+INNER JOIN gama_producto AS g
+    ON p.fk_gama = g.pk_gama;
+
+-- Composición externa ( LEFT JOIN, RIGHT JOIN )
+
+-- 11. Devuelve un listado que muestre solamente los clientes que no han realizado ningún pago.
+
+SELECT 
+    c.nombre_cliente
+FROM cliente AS c
+LEFT JOIN pago AS p
+    ON p.fk_cliente = c.pk_cliente
+WHERE p.fk_cliente IS NULL;
+
+
+-- 12. Devuelve un listado que muestre solamente los clientes que no han realizado ningún pedido.
+
+SELECT
+    c.nombre_cliente
+FROM cliente AS c
+LEFT JOIN pedido AS p
+    ON p.fk_cliente = c.pk_cliente
+WHERE p.fk_cliente IS NULL;
+
+
+-- 13. Devuelve un listado que muestre los clientes que no han realizado ningún pago y
+-- los que no han realizado ningún pedido.
+
+SELECT 
+    c.nombre_cliente
+FROM cliente AS c
+LEFT JOIN pago AS PA
+    ON PA.fk_cliente = C.pk_cliente
+LEFT JOIN pedido AS pe
+    ON pe.fk_cliente = c.pk_cliente
+WHERE pe.fk_cliente IS NULL
+AND pa.fk_cliente IS NULL;
+
+-- 14.Devuelve un listado que muestre solamente los empleados que no tienen una oficina asociada.
+
+SELECT 
+    e.nombre
+FROM empleado AS e
+LEFT JOIN oficina AS o
+    ON o.pk_oficina = e.fk_oficina
+WHERE o.pk_oficina IS NULL;
+
+-- 15.Devuelve un listado que muestre solamente los empleados que no tienen un cliente asociado.
+
+SELECT 
+    e.nombre
+FROM empleado AS e
+LEFT JOIN cliente AS c
+    ON e.pk_empleado = c.fk_representante_ventas
+WHERE c.fk_representante_ventas IS NULL;
+
+-- 16. Devuelve un listado que muestre solamente los empleados que no tienen un
+-- cliente asociado junto con los datos de la oficina donde trabajan.
+
+SELECT 
+    e.nombre,
+    o.*
+FROM empleado AS e
+LEFT JOIN cliente AS c
+    ON c.fk_representante_ventas = e.pk_empleado
+LEFT JOIN oficina AS o
+    ON o.pk_oficina = e.fk_oficina
+WHERE c.pk_cliente IS NULL;
+
+
+-- 17. Devuelve un listado que muestre los empleados que no tienen una oficina
+-- asociada y los que no tienen un cliente asociado.
+
+SELECT 
+    e.nombre
+FROM empleado AS e
+LEFT JOIN oficina AS o
+    ON e.fk_oficina = o.pk_oficina
+LEFT JOIN cliente AS c
+    ON c.fk_representante_ventas = e.pk_empleado
+WHERE o.pk_oficina IS NULL 
+OR c.pk_cliente IS NULL;
+
+-- 18.Devuelve un listado de los productos que nunca han aparecido en un pedido.
+
+SELECT
+    p.nombre
+FROM producto AS p
+LEFT JOIN detalle_pedido AS d
+    ON p.pk_producto = d.fk_producto
+
+WHERE d.fk_producto IS NULL;
+
+-- 19. Devuelve un listado de los productos que nunca han aparecido en un pedido.
+-- El resultado debe mostrar el nombre, la descripción y la imagen del producto
+
+DESCRIBE producto;
+SELECT 
+    p.nombre,
+    p.descripcion
+FROM producto AS p
+LEFT JOIN detalle_pedido AS d
+    ON d.fk_producto = p.pk_producto
+WHERE d.fk_producto IS NULL;
+
+
+-- 20.Devuelve las oficinas donde no trabajan ninguno de los empleados que hayan sido
+-- los representantes de ventas de algún cliente que haya realizado la compra de
+-- algún producto de la gama Frutales
+
+SELECT 
+    o.*
+FROM oficina AS o
+WHERE NOT EXISTS(
+    SELECT 1
+    FROM empleado AS e
+INNER JOIN cliente AS c
+    ON e.pk_empleado = c.fk_representante_ventas
+INNER JOIN pedido AS pe
+    ON pe.fk_cliente = c.pk_cliente
+INNER JOIN detalle_pedido AS de
+    ON de.fk_pedido = pe.pk_pedido
+INNER JOIN producto AS p
+    ON p.pk_producto = de.fk_producto
+INNER JOIN gama_producto AS g
+    ON p.fk_gama = g.pk_gama
+WHERE e.fk_oficina = o.pk_oficina
+    AND g.gama = 'Frutales'
+);
 
 
 
