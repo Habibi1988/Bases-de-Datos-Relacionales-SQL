@@ -480,7 +480,30 @@ WHERE e.fk_oficina = o.pk_oficina
     AND g.gama = 'Frutales'
 );
 
+-- 21. Devuelve un listado con los clientes que han realizado algún pedido pero no han 
+-- realizado ningún pago.
 
+SELECT 
+    c.nombre_cliente
+FROM cliente AS c
+LEFT JOIN pago AS p
+    ON c.pk_cliente = p.fk_cliente
+INNER JOIN pedido AS pe
+    ON pe.fk_cliente = c.pk_cliente
+WHERE p.fk_cliente IS NULL;
+
+-- 22.Devuelve un listado con los datos de los empleados que no tienen clientes
+-- asociados y el nombre de su jefe asociado.
+
+SELECT 
+    e.nombre AS empleado,
+    j.nombre AS jefe
+FROM empleado AS e
+LEFT JOIN empleado AS j
+    ON e.fk_jefe = j.pk_empleado
+LEFT JOIN cliente AS c
+    ON c.fk_representante_ventas = e.pk_empleado
+WHERE c.pk_cliente IS NULL;
 
 
 
