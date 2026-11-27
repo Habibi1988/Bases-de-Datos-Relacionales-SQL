@@ -1,8 +1,12 @@
 # Ejercicio 9 — INNER JOIN y OUTER JOIN
 
+[Español](#español) | [English](#english)
+
+## Español
+
 Esta carpeta contiene la práctica SQL del Ejercicio 9, centrada en consultas multitabla con las bases de datos `nomina` y `jardineria`.
 
-## Temas
+### Temas
 
 - Consultas multitabla con `INNER JOIN`
 - Composición externa con `LEFT JOIN` y conceptos de `OUTER JOIN`
@@ -14,9 +18,9 @@ Esta carpeta contiene la práctica SQL del Ejercicio 9, centrada en consultas mu
 - Uso de `NOT EXISTS` para excluir oficinas que cumplen determinadas condiciones
 - Integridad referencial y restricciones de claves foráneas
 
-## Secciones del ejercicio
+### Secciones del ejercicio
 
-### 1. Base de datos Nómina
+#### 1. Base de datos Nómina
 
 La primera parte practica las uniones entre empleados, departamentos y cargos. Incluye consultas para:
 
@@ -30,7 +34,7 @@ La primera parte practica las uniones entre empleados, departamentos y cargos. I
 - Identificar departamentos sin empleados
 - Comprender cómo las claves foráneas mantienen la integridad referencial
 
-### 2. Base de datos Jardinería
+#### 2. Base de datos Jardinería
 
 La segunda parte trabaja con clientes, representantes de ventas, oficinas, pedidos, detalles de pedidos, productos, gamas de productos y pagos.
 
@@ -50,27 +54,27 @@ Incluye consultas para:
 - Encontrar clientes que han realizado pedidos pero no han efectuado pagos
 - Listar empleados sin clientes asociados junto con sus jefes
 
-## Archivos
+### Archivos
 
 - `ejercicio09.pdf` — Enunciado original del ejercicio.
 - `scripts.sql` — Consultas SQL y respuestas del ejercicio.
 
-## Bases de datos
+### Bases de datos
 
 - `nomina`
 - `jardineria`
 
-## Notas
+### Notas
 
 Las consultas están escritas para MySQL. La consulta que solicita mostrar la imagen de los productos se ha adaptado a la estructura disponible de la tabla `producto`: el script devuelve el nombre y la descripción, ya que esta tabla no contiene una columna para la imagen.
 
 ---
 
-# Exercise 9 — INNER JOIN and OUTER JOIN
+## English
 
 This folder contains the SQL practice for Exercise 9, focused on multi-table queries using the `nomina` and `jardineria` databases.
 
-## Topics
+### Topics
 
 - Multi-table queries with `INNER JOIN`
 - Outer joins with `LEFT JOIN` and the concepts of `OUTER JOIN`
@@ -82,9 +86,9 @@ This folder contains the SQL practice for Exercise 9, focused on multi-table que
 - Using `NOT EXISTS` to exclude offices that meet specific conditions
 - Referential integrity and foreign key constraints
 
-## Exercise sections
+### Exercise sections
 
-### 1. Nómina database
+#### 1. Nómina database
 
 The first section practises joins between employees, departments and job positions. It includes queries to:
 
@@ -98,7 +102,7 @@ The first section practises joins between employees, departments and job positio
 - Identify departments without employees
 - Understand how foreign keys maintain referential integrity
 
-### 2. Jardinería database
+#### 2. Jardinería database
 
 The second section works with customers, sales representatives, offices, orders, order details, products, product ranges and payments.
 
@@ -118,16 +122,16 @@ It includes queries to:
 - Find customers who have placed orders but have not made payments
 - List employees without associated customers together with their managers
 
-## Files
+### Files
 
 - `ejercicio09.pdf` — Original exercise instructions.
 - `scripts.sql` — SQL queries and answers for the exercise.
 
-## Databases
+### Databases
 
 - `nomina`
 - `jardineria`
 
-## Notes
+### Notes
 
 The queries are written for MySQL. The query requesting product images has been adapted to the available structure of the `producto` table: the script returns the product name and description because the table does not contain an image column.
